@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block content %}
+ <p> Unknown search terms: {% for w in results %} {{w}} {% endfor %} </p>
+{% endblock %}

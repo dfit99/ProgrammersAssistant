@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<p>Results: {{total}}</p>
+<ul>
+    <div class="list-group">
+        Ignoring terms:    {% for w in stopwords %} {{w}} {% endfor %}
+
+        {% for n in my_list %}
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">{{docs[n[1]].title}}<span class="badge">{{n[0]}}</span></h4>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{n[1]}}">Show More</button>
+            {% if docs[n[1]].text|length >= 200 %}
+            <p class="list-group-item-text">{{docs[n[1]].text[0:200]}}...</p>
+            <div id="{{n[1]}}" class="collapse">{{docs[n[1]].text}}</div>
+            {% else %}
+            <div id="{{n[1]}}" class="collapse">{{docs[n[1]].text}}</div>
+            {% endif %}
+
+        </a>
+        {% endfor %}
+
+    </div>
+</ul>
+{% if render %}
+ <form class="navbar-form navbar-left"  role="search" method="post" action="search">
+        <div class="form-group">
+          <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}" >
+        </div>
+        <input type="hidden" name="start" value="{{end}}">
+        <button type="submit" class="btn btn-default">Next</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+{% endif %}
+</ul>
+{% endblock %}

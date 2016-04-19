@@ -1,0 +1,29 @@
+
+ {"settings": {
+    "number_of_shards": 1,
+    "index": {
+        "analysis": {
+            "analyzer": {
+                "snowball_analyzer": {
+                    "type": "snowball",
+                    "language": "English"
+                },
+                 "simple_analyzer": {
+                    "type": "simple",
+                    "language": "English"
+                }
+            }
+        }
+
+    }
+},
+    "dynamic": "strict",
+    "mappings": {
+        "movie": {
+            "properties": {
+                "body": {"type": "string", "analyzer": "snowball_analyzer", "index_options": "offsets"},
+                "source_code": {"type": "boolean", "index_options": "offsets"}
+            }
+        }
+    }
+}
