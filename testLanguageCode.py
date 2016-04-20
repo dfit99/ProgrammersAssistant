@@ -11,11 +11,11 @@ def get_languages(comments):
     for comment in comments:
         line = re.sub('\"','', comment)
         try:
-            print guess_lexer(line)
-            #print line, "\n|\n|\n|\n"
-            return True
+            guess_lexer(line)
         except:
             pass
+        else:
+            return True
     return False
 
-get_languages(comments)            
+print(get_languages(comments))
