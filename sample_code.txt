@@ -1,0 +1,1092 @@
+public void initializeGrid(){
+		this.grid = new Color [this.gridsize][this.gridsize];
+		for (int i = 0; i<this.gridsize; i++){
+			for (int j = 0; j<this.gridsize; j++){
+				this.grid[i][j]=Color.white;
+			}
+			<?php echo $x; ?>
+
+
+		}
+	}
+","
+def run_a_lot_of_trials(pop_size):
+    xList=[]
+    for i in range(0,20):
+        print pop_size,i
+        xList.append(run_trial(pop_size))
+    xList=[(x+0.0)/pop_size for x in xList]
+
+    return xList	
+","
+"""Do you have the Java JDK on your computer, and is it placed in C:\\Program Files\\Java\\jdk1.7.0_75 ? The IDE says you don't have a valid jdk on that location, so make sure you download one and put it there or update the JAVA_HOME path variable to point to the jdk."",""Yeah, wtf, use Eclipse or IntelliJ or something.  Or use a simple text editor and figure out the right command line commands to compile and run things manually if you really want to learn how everything works."",Maybe I'm just a bit more jaded. We shall see what happens.,""You seem to have been not keeping track of anything recent from them. Microsoft now owns Minecraft, open sourced a massive section of .NET, have it running on Linux, Mac, FreeBSD. J# has not existed for a number of years, no one used it. NTFS comes from WinDev division not the one's who have made Minecraft mod development available in VS. Considering they own Minecraft this isn't some plot to stop people making mods for it."",You project settings are messed up. It can't find your main class...  Click around the menus and shit to find and fix the settings.,Yeah I just changed it to jre7 but now for some reason Im getting [this](http://prntscr.com/74env6) it only ever compiled once then kept giving me this type of error.,""I'm pretty sure I have the java jdk installed on my computer, I'll guess I'll try and un install it and try again.
+
+Edit: Also is there a way to get java to set up the enveriment varibles for you?"",I don't understand why you would go through all the trouble to setup Java in Visual Studio. Just download Eclipse.,""Heavily disagree. Microsoft under Ballmer, sure. But Microsoft under Nadella has a pattern of pushing for more open source, releasing more of their tools for free (see: Visual Studio Community and Visual Studio Code), and has generally stepped away from their business practices in the past. New CEO can mean new direction for the company, and that's how it's been looking for the past year from them.
+
+I wouldn't trust Microsoft under Ballmer either and I would think a lot like you - that if he were in charge, there's going to be some money grab in the future. However, Nadella has made a huge effort taking the company in another direction, and with a new person in charge and no evidence to suggest otherwise, I'm optimistic about Microsoft's practices now."",""Admittedly, I try not to keep track of the trials and tribulations of the Microsoft world, but I did know about Minecraft. While .NET is open source running on Linux, my experiences with it have shown that Microsoft still can't be trusted yet in the area. The performance of .NET on Linux is pretty awful compared with the same application running on Windows.
+
+That being said, on one hand yeah, it would make sense that Visual Studio should work well with Minecraft mods. But on the other hand, why make something they've historically opposed easy to use for one product that has mods, when they can sell a tool/bundle or what have you to produce those mods with more control? I think that will play out in Minecraft 2, whenever that comes out.
+
+Ultimately, I'm not saying you're wrong, but Microsoft has a pattern of behavior. And Microsoft owning Minecraft and making the moves that it has, doesn't change the pattern. It feels more like just a new direction which will probably just follow the same pattern and really, only time will tell on that.
+
+Edited for grammar."",""&gt; Edit: Also is there a way to get java to set up the enveriment varibles for you?
+
+I'm not sure, but that is easy anyway. Just put the jdk somewhere on the drive, copy the path to the folder and then go to [Edit environment variables](http://i.imgur.com/OXWji5z.png), search for Path in the system panel, hit edit and add the path you just copied in there, then save."",""I'm a novice, but I have to ask, is Visual Studio really the best IDE for Java? It seems like a great big hack to try to get it to work. According to this: http://stackoverflow.com/questions/15754713/using-java-with-microsoft-visual-studio-2012 it's a barely functioning plugin. 
+
+IIRC Microsoft mostly hates Java (for reasons), in response they tried to come up with J++ which is now J#. Microsoft has a history of being aggressively incompatible with products they are competing with (doc format, W3C standards, NTFS, etc). Why would they make it easy for you to use Java in their tool, when they actively encourage J# as their alternative (which isn't compatible with Java.)
+
+I would suggest that you use Eclipse."",Please stop with your anti-Microsoft FUD."
+"https://itunes.apple.com/us/app/quizup/id718421443?mt=8,""i think i wasnt clear enough
+
+My friends and i are all in the same grade/class. say we have a science test coming up, we want to be able to have something like this but with questions we make for each other"",What's your point..
+,This sounds like a fairly straight forward web application.  You should start by designing the frontend and choosing the platform for the backend.
+
+If you have any specific questions let us know.  Sounds like a good idea and a fun project.
+
+Good luck!,""If they would like something to use to quiz each other, this is a useful tool for doing that?  Why wait until you can figure how to code this?  If a test is coming up use this whole you work on it. 
+
+What's your point?"",""Grab a web framework and code out some pages as you'd like to see them.  Then get it hooked up to a database and set up a log-in system.  This is the kind of thing where you should start out, see where you get stuck, and then ask for specific help there.  It's certainly a good and doable project if you want to learn more about web development."",https://www.onlinequizcreator.com/"
+"""I don't know if this really is a programming question. If the documentation leads you to errors, ask the developer or whoever maintains it for clarification?
+
+On another note, there is no way we can help you with your question. Linking us to the source or general install instructions doesn't do jack. You need to tell us what you typed in the terminal that leads up to this error, and how you attempted to debug the issue."""
+"""The programs run in RAM, not hard disk. The two spaces store completely different information. 
+
+It's fine, you're not going to break anything. "",""Dead simple:
+
+Develop in a virtual machine. "",""&gt; I'm not sure it can adversly affect your machine.
+
+Memory leaks per se can't harm the machine in any way. They might bungle up the OS temporarily if the OS doesn't deal with memory well, but any modern OS is fine and even if it weren't a reset would clear out the leaked RAM anyway."",""When you hear """"memory leak"""", """"memory"""" in this context refers to RAM (actually, that's pretty across the board for IT). For hard disk, it's """"Disk"""" or """"File system""""
+
+Memory leaks are usually cleaned up by the OS when the process finishes executing. I've never heard of it being a problem other than making your programs go slow or crash. I'm not sure it can adversly affect your machine.
+
+If you're paranoid (or are interested in building good memory management habits), you can use something like valgrind to check your code for leaks."",Would partitioning the HDD and throwing the programs in there be of any use?,You won't do damage to the system as long as you don't deliberately try to damage it. Maybe don't use the SSD drive if you are planning on doing a ton of read/write operations."
+"""Just to clarify, no one here means they are actually typing code that long, they are just researching solutions, debugging errors and some of that happens to involve writing code.
+
+The average LOCs from big software companies is usually 10-20 LOCs a day.  I tend to do quite a bit more than that because I do smallish client work projects with a lot of boilerplate, but writing very little code and 'coding' all day is common.
+
+edit: for all the downvoters, please show me a metric of your average LOCs a day - you'll be surprised how little you write.  Also, juding by the highly upvoted commented below - I'm not sure why anyone would read this and think I was trying to use LOC as a productivity metric."",""When you say LOC, do you mean lines of code? Just curious - not familiar with the terminology and that seems like a really low number for what I was expecting."",""PhD with a machine learning focus. "",""Anywhere from 2 to 5 usually. Depending on what I'm doing, how enthused I am about what I'm doing, and how many meetings I have that day.
+
+If I go over that, or even 5 solid hours of intense coding, I start having a hard time breaking out of """"coding mode"""" and have a very hard time functioning in real life or communicating. I usually try not to do intense work for 30min to an hour at a time. Usually I can complete quite a bit of work in a 30min laser focus block, unless I run into an issue. 
+
+Not that I haven't done more than that or it's uncommon for me to spend 8 or even 10 hours of solid work. But on average it's about 2 to 5. Today was actually one of those 8 solid hours of balls to the wall getting ready for release days. (not including meetings or other short breaks)"",""How long I go depends on how interested in the project I feel.  I've worked for days with breaks for food and sleep only on personal projects.  For a client I usually spend 2-3 hours before I run into something that calls for a meeting or some careful planning, which is as important if not more than just coding.  I feel like you really don't need to code for hours and hours straight unless everything is planned out and you just need to type stuff out.  If I work long hours it is usually out of necessity because I need to be immersed in the problem to see everything that's going on.  One might say that I'm dealing with bad code and just want to get it over with asap.  On a side note I don't believe the value of a programmer lies in any way in how many hours straight can be spent programming, quite the opposite.  The less time you have to spend writing stuff to get a job done the more efficient you are."",""I'd say I work on code about 4 hours out of the day, but sometimes of course it could be 0 hours or sometimes as much as maybe 6.5 hours.
+
+When I'm not writing code I'm usually either in meetings, talking to co-workers, emails, reading about something, or planning what I'm going to do next."",""Max is like four hours, at least for work code. I can screw around in my own projects in the evening after a nice break, but the [little gray cells](http://en.wikipedia.org/wiki/Hercule_Poirot) only last like... four hours.
+
+Usually it's less than that, what with meetings and such, but my whole day is scheduled so that I can usually spend all the time from 2:00 to 6:00 actually working if people will leave me the hell alone.
+
+Edit: that's what I'm saying is that four hours is about as long as I can actually stand to be crafting logic. That's the tiring part. If it's piddly crap, then it doesn't matter how long you spend doing it. May as well play solitaire at the same time."",""I code around 8-14 hours a day. 5-6 hours at work and then at home. I used to be able to code only max 4-5h a day like you. You get used to it really fast. Just hold small breaks in between and continue. "",LOC just means lines of code.  It is pretty much the absolute worst metric for a programmers productivity.,[deleted],""yes, it means lines of code (haha I just edited because my initial response was """"yes, it means LOC"""", haha)"",I don't think anyone here was trying to use LOC as a metric for productivity.,""Very dependent on the days.  On average I'd say I'd do 4-5 hours of coding at work.  Some days we get caught up in discussions and/or meetings and don't really do any coding.  Or highly critical system(s) go down and you twiddle your thumbs all day.  Other days you break something and spend 12 hours coding and watching builds run.  
+
+Some coworkers probably get closer to 6-7 hours in, but I try to put in 1-4 hours a night to finish my degree.  I could see myself getting to 6-7 hours of solid development, but only once I have as free as normal life allows to unwind."",""I work in the semiconductor industry as a product engineer on NAND Flash memory (the stuff that goes in SSDs). I'd say ~25-50% (depending on the product's stage of development) of my day is spent writing C++ and tester-specific code that closely resembles assembly language to perform various experiments on the die. Most of these experiments are done to debug issues with the production tests and/or to find the optimal values for various parameters (voltages/timing/etc, there are over 20,000 of these). 
+
+The code I write probably doesn't resemble anything you'd see outside of an electrical/computer engineering field. Nearly everything is done via bitwise operations. It's just means to an end to send various commands to the part/tester rather than an actual project. Once I finish an experiment the code is usually never touched again.
+
+Early on in the development process of a new product I also spend a lot of time writing and running simulations in Verilog, but that's an HDL rather than a programming language. "",""It depends on how broken things are that day. I was at the office 11 hours yesterday and coded for about 6 of them. Usually, my breakdown of a 9 hour day is this:
+3 hours coding
+1 hour on Stack Overflow/MSDN
+1 hour arguing about system architecture
+1.5 hours talking about comics, movies, our wives/girlfriends, physics, math
+30 minutes of me on the shitter reading reddit (I have digestive issues)
+45 minute lunch
+15 minutes of getting my first coffee, booting up, and reading the paper
+"",""I wouldn't call myself an engineer, but if you meant any person that does programming professionally probably 5 hours out of 8. "",""What degree are you working on? """
+"""YuleTideCamel got here first, but if you need more than one response I can contribute too. I'm a gameplay programmer."",Sure PM away. I'm a software architect.,Thirdzies - full stack MS dev."
+"""I'm using geany and normally I can save, build, then execute but I can only execute now and when ever I run it that's the error I get. No syntax or anything "",'.' is not recognized as an internal or external command 
+,""That's what I have "",""I'm not sure I think it's GCC or TDM "",Where do u get that?,Which c++ compiler are you using,""Add the following on line 2 - """"using namespace std;"""" not inc """""",https://www.google.co.nz/url?sa=t&amp;source=web&amp;rct=j&amp;ei=jb5dVaLsFMLU8gWunYHgAg&amp;url=http://runnable.com/U_0o0oDH5BAUngwy/dave-s-ascii-tree-example-for-c%252B%252B&amp;ved=0CBoQFjAA&amp;usg=AFQjCNHFJFiiRwwpXRRhfcwGwY39532-yQ&amp;sig2=C3uiVnn7qCKnwrCplPHiPA,""What exactly is the error you get, and would you be able to paste your code on [gist](https://gist.github.com/)?"",http://runnable.com/U_0o0oDH5BAUngwy/dave-s-ascii-tree-example-for-c%2B%2B"
+"You're welcome to PM me if you'd like. I'm happy to help out where I can.,""I'm gonna check this out. I'm intrigued. "",[deleted],I am indeed and I felt like last semester I didn't make enough of an effort to get one in school. I'll look for a local group that sounds good. Thanks !,""You should try pair programming with more experienced coding friends, where someone more experienced than you (or less if you want) observes you code and debugs along. Thats probably one of your easiest options. You should also go to coding conferences/workshops/hackathons ==&gt; they always have some kind of mentor around that you can contact later and ask for help/mentoring. Also try out the online communities such as freecodecamp.com that can assist you with dev work. If all else fails, pick up a book on coding by a known author off Amazon, its probably the cheapest and easiest option to gain valuable experience from a """"mentor"""". (Also consider using youtube to search for professors/mentors who presented before. Blogs by experienced software devs are also another helpful way of gaining advice and experience)"",""Are you in college? There might be alumni networks or professional associations you can contact and ask. 
+
+If not, what about going to meetup-type events in your area? I think those are a great resource because the people who attend are typically very interested/involved in the programming community, and also open to helping/teaching/mentoring newer folks! Good luck finding someone, it really does help. :)"",[deleted],""Thanks for the advice, I ordered a few books yesterday from Amazon and I like the idea of videos I'll look into that. I also don't know of any summer hackathons but I'll take a look around! "",I've had a lot of luck with [codementor](https://www.codementor.io/r/LPP9IJH7ME) (shameless affiliate link),""Hello, I'm looking for contributors for [JALSE](https://github.com/Ellzord/JALSE) (an open source multi entity framework for simulation). We try to raise tickets for everything (features, bugs, questions), design, implement as a team (git/branching), have good code coverage (writing unit tests) and collaborate on writing simulations (we're working on a zombie infection one atm). If you're interested in gaining some experience this would be quite hands on. 
+
+Let me know and good luck"",""I think the question I would have for you first is, what do you want to do? Codementor is great, but you will pay hourly for that. I would look into finding someone that aligns with your goals moving forward and start there. There are plenty of good developers that would be willing to work with you without charging you. :)"",""I may not always have time to help, but you can PM me from time to time."",You could also try /r/programmingbuddies if nothing turns up here :),Do these subreddits ever end? Almost every day there's a new thing that makes me wonder why I didn't think of that. Thanks!,Its a pretty active community"
+"""In general, you can learn to program without spending any additional money.
+
+In terms of the actual tools you need to program (e.g. a compiler, an IDE, related tools such as source control, a diff tool, etc), you can get just about anything you want for free.  This is, in part, due to $0 (""""free"""") software offered by companies -- for instance, Microsoft's Visual Studio can be downloaded at no cost.  Most of these tools are free, although many offer a """"professional"""" or higher-tier version that isn't free (e.g. Visual Studio Professional).
+
+In addition, there's also the free and open-source community, which offers programs that are free/open-source.  Although """"free"""" in this case means """"free as in speech"""", it also leads to the software being de facto free (as in costing $0).
+
+In terms of tutorials and other learning tools, you can find tutorials online, as well as youtube videos, or even free courses (e.g. MIT's OpenCourseWare).  Of course, if you want to spend money, you could buy a textbook or other stuff.
+
+TLDR is that you can learn to program without spending any money, although there are tools that are worth spending money on if you do program professionally."",Have you read the [FAQ](http://www.reddit.com/r/learnprogramming/wiki/faq)?"
+"Maybe use something like http://codepen.io or others that cover other languages. Most of these sites have lots of examples to use and it's easy to show others without installing anything.,""A fun one I like to do is to get a class to line up abreast, and then bubble sort by height or birthday. Trick is to emphasize that the only actions allowed are either to perform a swap adjacent, or compare heights. Really helps to demonstrate how a computer operates."",""I would just stick with HTML. You don't need to install anything, and you can draw a French flag with a few divs."",""Are you fluent in French, and are your audience also fluent?
+
+The way you phrased your question makes me think you may be native English speakers doing an exercise for a French class, and if that's the case I'm not really convinced that 15 minutes is actually enough time to teach anything non-trivial about programming.
+
+The fact that you would likely be dealing with language keywords in English may also make it harder to score well for an assignment that is really about communicating in French.
+
+If I've got that wrong absolutely feel free to ignore me though, but if that's your situation then personally I would probably try a different topic."",""Teach then basic HTML + CSS, or html5. I know Its not coding but it's easy and it will lead into something like that."",[deleted],""How about going on ideone.com, which allows you to work in many languages without installing anything, and do a basic hello world, fibonacci, or whatever in multiple languages. Even if you don't already know them, you could easily enough put together a comparison of code in Java (easy if you know C#)  Python, and maybe C++ or something.
+
+"",""Draw concentric circles, pretty patterns, or text adventure (with four or five basic locations and a random monster) in [Scratch.](https://scratch.mit.edu/)
+
+
+"",You could potentially do something with JavaScript in the developer console. No need to install anything and you could show them how to do something cool,""Awesome, this will work great with u/Magixxxx 's suggestion "",""Bonjour, monde!"",It seems like it could be possible to teach the basics of lisp in 15 minutes..,""I wouldn't do anything with a computer. 
+
+A quick exercise would be to simulate the different basic sorting methods, bubble selection and insertion. 
+
+You can give everyone a few pieces of candy and ask them to sort it alphabetically. Then go over the different algorithms. "",""That sounds like a good idea thanks, I will check out some ideas right now."",""Building on /u/Magixxxx and /u/tribalNerd suggestions, I think it would be the most engaging if you taught them a really simple game in javascript. Something like a number guessing game, or a very simple choose-your-own-adventure.
+
+When I was in highschool, the moment I realized I could make a full fledged choose your adventure game, I was hooked and went home and wrote some funny stories. It's by far the most primitive way to make something that is acceptable as a game, and I think it's the best way to make the kids want to pursue this on their own."""
+"""The message is just a small transparent box, kinda like the one that appears when you change the volume or brightness on a mac and it says build failed. There's no red error text or anything displayed anywhere.
+
+It looks like this: http://masonmark.com/stuff/xcode_pass_which_is_fail.png
+except with """"Build failed""""
+
+
+And thanks for the video. I'll give it a watch."",try https://coderunnerapp.com,""And if you had mentioned the fact that the most current versions of Xcode have the tools already installed, but added as a caveat that older versions do not, I could see that suggesting that. Your answer as it stands demonstrates that you are not familiar with the tools yourself, and I voted accordingly."",Yes I have the tools installed and when I went through the process of creating a new project I'm pretty sure I selected command line but it opened the whole big graphical editor so I just went with it.,""Oh I see, I didn't know that was a thing. It says """"linker command failed with exit code 1 (use -v to see invocation)"""""",""This is typically the result of the compiler being unable to find a file, or finding a duplicate symbol (which most often happens if the visibility of a definition is incorrect). Not having access to your client directly makes it difficult to determine exactly what is happening, so I apologize if this answer is not all that helpful. From personal experience I can tell you that diagnosing compilation errors is something that will become easier for you with some experience (and a few groans and facepalms)."",Thanks for all the help. I think I'm just going to start from a clean slate after watching some tutorials on Xcode.,OP didn't mention his OSX version nor his Xcode version.,""Simply installing Xcode also installs the command line tools, they are included in the application bundle. This has not always been the case, but it's been that way since OS X 10.9 / Xcode 5."",Try installing the Xcode command line tools. Maybe that'll fix things but I can't say for sure.,""Regardless of the selection you make the Xcode IDE will open up, as it is assumed you want to use the IDE to develop if you are creating a project with the IDE. You can however, build a simple C program from the command line by doing the following:
+
+- Open Terminal and navigate to the directory of your source file. (In this example I want to compile and run hello.c, which is located on my Desktop.
+- Type the following command to compile (subbing in the source file and executable names for the ones you want to use):
+
+`clang hello.c -o hello`
+
+The first term invokes the clang front-end, the second is the source file to compile, the third is an option flag to denote what the output should be named, and the fourth is the name to assign to the output executable.
+
+Then execute the program
+
+`./hello`
+
+
+Also note that Terminal includes many popular UNIX tools like vim and nano if you want to use those in lieu of a full IDE for code entry."",Did you create a command-line tool application?  Do you have command-line tools installed?,""The content of the message would be helpful. Also, this video is a little older but might be helpful to you:
+
+https://www.youtube.com/watch?v=_gwPhmyiuVo"",""Right I get that, but when a build fails you can see that in Issue Navigator (the icon that's a triangle with an exclamation point inside). Any sort of error that Xcode encounters when building will pop in there, along with a message detailing the error."""
+"""This is crap. Utter crap. "",""&gt; Second, why are you declaring a single employee object when you should have an employee object for each employee.
+
+We are only supposed to have one employee object. We are not storing the data for each individual employee. 
+
+As you can already tell, I am just finishing my first semester in college and have just dipped into OOP. The way my professor has taught us it to have as little as possible in our main method and have our classes work together. This is why my departments array is in my employee class. Maybe this is completely wrong, but it's how we've been taught. "",""    randomslapple
+    randomsnapple
+
+Hmm. Is somebody having a little fun with Reddit?
+"",""Well, anyway.
+
+If your code works and you understand why, that's good. You're learning.
+
+Your Employee class has a bunch of public methods that call each other in a chain. What happens if someone else uses that class and calls things arbitrarily? Weird stuff, I'm sure. You could do a lot to mitigate that just by hiding the down-the-chain methods.
+
+That is a major criticism of your code. But since you aren't even using properties yet, I'm hesitant to even point it out. It's likely too early in your learning process to start to burden you with that kind of concern.
+
+It's one thing to write a class that works correctly when used only in exactly the correct way; it's another thing entirely to write a class that another programmer can use without things behaving unexpectedly.
+
+I wouldn't call it """"utter crap"""", though, that's just rude and not helpful.
+
+"",""These are good comments. "",""Can't a guy get some legitimate feedback on my project! "",Why do you think so?,""Thank you for the feedback! 
+
+&gt; You could do a lot to mitigate that just by hiding the down-the-chain methods.
+
+If I'm understand this correctly, are you suggesting I should make all of the other methods besides  setLineInput and printDerparmentPay private so that they cannot be called?"",""It's not completely wrong, just mostly wrong. 
+
+First, it ruins the point of the assignment to have only one employee object. What is he trying to teach you, how to program badly? There's no point. It's pointless. Why not just do everything in the program class then. 
+
+Second, you're supposed to encapsulate computation specific to your object within the object's class, yes. But creating and instantiating the department array doesn't have anything to do with employees, so that's wrong. 
+
+Maybe your professor is dumb. Maybe there's a method to his madness. But there's no reason to fear having computation in the main method. That's what it's for. 
+
+The main method is for tying everything together and using all of your classes that you've made together. It's like the center of the venn diagram. Everything comes out to play in the main method. It's a glorious orgy of objects. "",Yes.,""First, design is spelled wrong in your Readme.md 
+
+
+Second, why are you declaring a single employee object when you should have an employee object for each employee. Instead of using object oriented programming, you've just moved code out of the main method into another file. 
+
+
+Third, in your employee file, you have your departments array, which should be in the main method, and you initialize the array in the employee file, which should, again, be done in the main method, or at least in the departments file. 
+
+
+The employee class should only have the objects/attributes and methods that make up an employee, and NOTHING ELSE. 
+
+
+Other than your misunderstanding of object oriented programming, which will clear up with time and experience, the semantics of the code are good. And the code is neat and clear, which is also important. But you need to read up on how object oriented programming actually works. 
+
+
+In this program, like I said above, you're essentially moving computation from the main method (where it belongs) into the employee class, where it does not. "",""Girls just wanna have fun. "",""I don't know but whoever it is only comments on my posts. I have confronted a friend, but he still denies that it's him. "",""A few notes from a quick browsing:
+
+1. Getter and Setter properties are generally preferable to Getter and Setter methods.  https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx
+
+2. Avoid abbreviated variable names unless it's a common acronym.  Examples: """"xmlFileBatch"""", """"ftpService"""", etc.
+
+3. You don't need to be super verbose with your methods when they are just replacing expressive operations.  Instead of """"public void increaseCounter() ..."""" """"counter++"""" is a lot more succinct and less confusing.  Don't bother making this more complicated until it needs to be.
+
+4. Avoid magic numbers.  I have no idea what """"input.Length == 4"""" is supposed to signify.  This is not really a big deal for 0 since most people can reason that the first element might be significant but beyond that you should use a constant or static variable to represent this value.
+
+5. In C# PascalCase is the preferred casing.  Local variables should be in camelCase, pretty much anything else should be in PascalCase.
+
+6. Line 105 in Employee.cs uses a for loop when a foreach would suffice.  Since """"departments"""" is always an array of size 7 it's much more obvious what your intent is with a foreach loop instead of a for loop.  I personally would prefer a LINQ foreach loop: departments.ForEach(department =&gt; Console.WriteLine(""""{0, 12}    {1, 11}"""", i + 1,  department.getDeparmentPay());  You'll notice that I left """"i"""" in there even though I no longer have an iterating variable.  This is because I think you should just get rid of that and replace it with a member variable belonging to the department signifying its name.
+
+7. Pretty minor, but generally you should remove any unused using statements from your files.  I know VS puts them in there by default but it's generally better to keep your files clean and include only the namespaces you need to avoid confusion like """"Wait, why did I include this?  I must have forgotten something!"""""""
+"That is true. I always feel like knowledge solidifies further once I attempt to explain something to someone.,""1. When someone asks you to parse a CSV, use a string split. After that breaks, download a library to do it and use that instead. Don't ever try fixing a bug in your shitty CSV parsing code. That way lies madness.
+
+2. Side effects cause brain damage. A given piece of code should work only on the input you pass to it and on the output you get back from it, because otherwise Cthulhu wins.
+
+3. If you can make code run faster by multithreading it but you don't need it to run faster *right now,* don't bother. In any non-trivial system, something always breaks. (No, I mean it. Something *always breaks.* Stop it!)
+
+4. Remember that the purpose of code is to communicate to the *next programmer* who has to read it, not just to the compiler. Keeping your code simple is doing yourself a favor: the next guy is usually you.
+
+5. Work out whenever you can, because spending too much time at a computer will literally kill you."",""The debbuger is better than you at finding bugs in your code. Like, infinitely times better. So many hours lost. They didn't have to be wasted combing over broken code. ;_;"",""Sound advice, thanks."",I like 5...I think it goes too unmentioned in the programming subreddits. In fact we should make our own just for that...fitprogrammers or programmingfitness or something  I don't know.,""Well put. Also, and this might be just me, but teaching is extremely satisfying, in an existential way.
+
+Teaching a person to program means you teach them to teach the computer. It makes me feel really good to be a source of that. I get a sense of immortality from that which is hard to explain. And I would want my younger-self to experience that sooner."",""LEARN WEB SHIT! Seriously, learn everything about net programming, everything.  PHP, HTML, JavaScript, APIs, CSS, Andriod, iOS, learn absolutely everything about web programming.  Learn front end, learn backend.  My focus was in application development, because I thought it was practical.  My job oppertunities are super limited, everyone wants app devs, web devs, no one wants me.  I'm learning web dev because I couldn't find a job in my field.  LEARN WEB PROGRAMMING!!  I would travel back in time, shake myself violently and scream to do so."",""""""brogrammer"""" "",""I've thought about this a lot, and the more I think about it, the more I realize that it would have been futile. I am where I am now *because* of the mistakes I've made in the past. I had to see for myself in order to learn for myself.
+
+How many articles and tutorials and guides and examples have I read about object oriented programming and design? Hundreds. If I had been there to tell myself those same things, it would have been hundreds + 1. I sort of just needed to see real examples of why certain patterns and concepts exist in order to use them and understand them. A purely academic understanding derived from hundreds of completely contrived and fake examples of cars and animals and all that other nonsense wasn't going to help me understand anything more than syntax, not even explain the general concept.
+
+I will say this though - when I first started doing web dev, it was mostly client side. I would have told myself to get into server side a lot sooner."",sit down and read a book written by a professional. stop wasting time googling small things - make sure you understand big concepts first.,But what if I want to live a life of danger?,""I played Eve for a few months,  luckily I realized I was addicted and stopped. That game is a time backhole! "",""Yeah, sometimes my co-workers will start talking about the ~~time waster's~~... ahem... games that they played over the weekend. I'll just think to myself, I'm glad I spent those 10-30 hours coding, going to the gym or reading."",Don't quit.,10% as in from job interview to job offer? Or as in job application to job offer?,Don't play EVE Online.,From reasonably-good-application to offer.,be a forest ranger,I was thinking firefighter.,""I assumed US, might be true in your country but C++, at this point in the game, is a bit of a one trick pony, used for game development, and only some of it.  I personally despise C++ because I feel that C# along with C could solve every problem C++ could solve but easier and more concise.  But in my experience, web is the way to go.  As I said, I'm learning it, not hard coming from a application development start, but I wish I had focused more on it in uni as nearly 80% of all the job listings are something to do with web.  I don't particularly like front end web or how the programs are structured, but I tend to follow the money."",I agree with you completely that you don't learn much programming from your assignments. Almost everything I have learned about programming I have learned by going in depth on my own time.
+
+Could you elaborate on tutoring CS?,""* To my 13 year-old-programmer-self: You're right, programming is less about knowing math, and more about being able to pull apart ideas into their basic forms, and using those ideas in new ways. Don't get discouraged by your poor math knowledge, keep writing code, with functions and classes.
+
+* To my 17 year-old-programming-self: for the love of god, do your math homework! Practice your Vector math! And use Vectors in your code instead of 2 variables (one for x and another for y). Also, learn what DRY means.
+
+* To my 19 year-old-programming-self: You won't really learn much programming from your college assignments. Turn every wimpy homework assignment you're given into a side project. Also: Tutor Computer Science. Trust me.
+
+* To my 21 year-old-programming-self: Consider a 10% acceptance rate for programming interviews successful. Don't take the first job that comes your way, keep applying. **edit:** There is an important silicon valley properb: *9 out of 10 companies fail. The lesson is not don't try, the lesson is start 10 companies.*"",""Not him, but explaining different concepts to different people forces you to think in different ways and turn the way you know something into something they will understand.  You might be an analytical thinker, but the person you are helping needs to visualize things.  Or, perhaps you thought you understood a concept well, but not well enough to explain it simply.  As Einstein said,
+
+&gt; If you can't explain it simply, you don't understand it well enough.
+
+So by explaining concepts to people, you are helping yourself solidify your knowledge, it can look good on applications / pays, and overall just a good thing to do assuming you know your CS knowledge well."",""As a person who's currently 'cheating' in their course compared to other students by using a debugger, so much this."",""But I heard that C++ programmers are cool and appreciated, and also in my country the exam is only from C++ language."",""Learn everything you have access to. """"When will I ever need this? """" is a dumb ass question if you have the opportunity to learn something. 
+
+Also,  stop looking for the """"best way"""" to learn and just dive in"",To me circa 1999 creating a Geocities site: you know there's code behind that drag and drop.  Zoom ahead several years: you know Actionscript is fun but just learn JavaScript.,""&gt; the purpose of code is to communicate to the next programmer who has to read it
+
+One reason I leave love notes in the code for the """"next programmer"""" before I leave a job."",Then be a landscaper,""nope, just being aware that body and mind are connected:&gt;"",""Don't Play Diablo 2 , WoW ; that would add up to around 10 years of productivity for me."",""More time programming, less time thinking about programming. Thinking about programming is definitely good but I would often come up an idea and spend more time thinking about how to make it happen than actually spending time making it happen. If you have an idea, just jump right in. Learn what you need to know as you go. Don't dwell on the design and architecture for too long, if it gets out hand, start over and reuse the good components from your initial design. (I've done this tons of times) Just have fun, enjoy learning and exploring, don't get discouraged if things don't turn out exactly as you intended, they never do."",Exactly that.,""""""You're not that good 18yr-old-me! You'll ace school (more or less), but you know nothing (John Snow... haha... you'll get the reference in 17 years). Get a book about clean code, TDD and agile development!"""""""
+"I'm considering Epicodus right now. Is that the program that you are attending?,""http://www.quora.com/Reviews-of-Software-Craftsmanship-Guild  
+  
+39 reviews here, the Guild skews a bit older than some of the other camps as far as age group.  Most of our students are 25 to 40 years old.  It's likely because we target enterprise stacks and technology... not so much the valley.  
+  
+Reach out to those reviewers directly on Quora if you like."",Hey OP!
+
+I'm currently a senior at Hack Reactor. What do you want to know?,""Which one, if you don't mind me asking? 
+
+I went to Epicodus and it was great, but they've been expanding and changing TONS recently."",""Wish I could help. I'm starting a bootcamp in a little over a month. "",""The mindset of asking questions? I'm a CS student, I have to pair program daily, if that's what you're referring to"",""http://www.theodinproject.com It's free but is just as good as a bootcamp you pay for. I'm halfway through the Rails portion and have been doing it for a month now. 
+
+  or www.freecodecamp.com If you want to learn full stack JavaScript. I plan on doing this one when I'm done the HTML/CSS on Odin. "",""Throwaway for obvious reasons. I'm currently attending a program at Portland. We've been provided with a poorly trained instructor, and a low standard of education. Every attempt to communicate with cult like management has been shot down, dismissed or not taken seriously. I'm really not sure what to do at this point."",""Did Dev Bootcamp in New York and started a 73k a year programming job about a month ago.  They are thrilled with me, I'm thrilled with them and a I had zero experience in that field before I attended. 
+
+It's *hard*, overwhelming and you have to work your ass off.  But a pretty vast majority of those I attended with are happy then went and working full time as Jr devs.  I'd call that a win."",Check this hacker news thread out. It's very relevant to your question: https://news.ycombinator.com/item?id=9616691,""How do you find the time to do anything besides the bootcamp? 80 hours a week sounds ridiculous. Also, is it really social, do you ever get to code alone?
+
+"",""I'm about a year post-bootcamp working full time as a dev. I'm getting to a place where the constant learning and thrill of building web apps is melding with the skills I developed in 9+ years running a small business prior to the career change. It's been an exciting,  engaging and rewarding transition all the way through."",""Do you work with remote students as well? Or has that program launched yet? Unfortunately, I am way to far to take the bootcamp in person, but the remote program looks great as well. 
+
+Do you think their is a point of pursuing both a CS degree and attending a bootcamp, or do they just overlap?
+
+Thanks for answering those questions, really appreciate it! :)"",""ME!
+
+I was 32 and left my previous job that I was unhappy with.  It's extremely overwhelming and it's hard to feel like the grandpa of your group.  But it was certainly worth it, I'm working full-time as a Dev and make a lot more money."",[deleted],Epicous is my front runner at the moment. Would you mind expanding on your thoughts?,""My friend went to a boot camp here in sf(it was actually hack reactor as someone else mentioned) and landed a job immediately after, he had a bachelor's in something kinda unrelated from Perdue though so that might have helped"",""
+How much coding experience do most people have going into boot camp? I have a CS degree, but went into an IT position that was only about half software projects and I'm the only one in my company working on it so I don't have many true coding projects to my name. Would you recommend boot camp to someone like me who knows code/design principles but could use some team practice and projects to show for it?
+
+Thanks"",""It's called immersive for a reason :)
+
+I spend between 65 and 80 hours a week onsite, from Monday to Saturday. Students are required to be present 9a-8p Mon-Sat, so there isn't really a choice there. I've found that it really flies by- programming is one of those things where you look up and hours have gone by since you last checked. I do have limited time for social stuff, but I find time to do things with the friends I've made here in SF, usually on Saturday nights and Sundays.
+
+When you're a junior (first six weeks), you go through a gauntlet of two-day courses called 'sprints'. As a senior (last 6 weeks), you will work on projects. You're required to work with a pair programming partner for all of the sprints, and everything except the 48-hour MVP Project will be worked on as part of a 3-5 person team when you're a senior. This is intended to reflect what you'll be doing in a job after you graduate: pair programming is an industry standard practice, and very few software engineers work 'lone wolf' style these days. (There's one exception while you're a junior: you can apply to 'solo' exactly one sprint. Generally, it's a less enjoyable experience than working with a partner!) It's surprising how enjoyable it is to build something with others once you all have learned to communicate correctly.
+
+Side projects are a great way to get solo coding experience, if that's what you're looking for. I've completed a few of them in my time here- mostly small utility things that I built in my spare time as a junior. If you're really interested in building a large project, the Hacker in Residence program is a great way to have some time to do that before entering the job market."",""&gt; do you ever get to code alone?
+
+You need to get rid of this mindset ASAP if you actually plan to pursue a career in software development. "",""To piggyback on the OP, I'd like to hear from someone who is 30+ and attended a boot camp. Looks like I may be getting laid off and thinking about a career change. Most testimonials I've heard are from folks who are newish in their careers. "",[deleted]"
+"""First off, it all depends on how large the thing is that you are planning. Are you making a 100 line script or a 100,000 line application? Is it just you or are you working together with a team of 10 people? Is this just something for yourself or are you selling it for millions of dollars to customers worldwide? Is it just a toy or would a bug cost somebody thousands of dollars due to mistakes or wasted resources?
+
+Regardless of which development methodology you choose (waterfall, agile, etc), you will always end up bouncing back and forth between several major tasks:
+
+ * Gathering requirements
+ * Designing
+ * Implementing
+ * Testing
+
+Each later stage depends on the stage before it, but the later stages will also point out flaws in the previous stages and you will have to go back and make changes. How and when you do this is what really sets different methodologies apart, but in general, you'll be iterating over and over on those four things.
+
+It's also important to note that this pattern applies at many different levels of abstraction. The application as a whole has requirements and needs to be designed, implemented, and tested. But thinking only at that level for a large application would be unmanageable, so we break it down into smaller parts. We think about individual problems the user wants to solve; individual tasks they need to perform; algorithms that solve each problem; individual windows and widgets for interacting with; then into the classes, methods, and variables that will make up each of those individual pieces; and finally into the line-by-line instructions that form those methods and describe those objects. At each of these levels, requirements will suggest a design that shapes an implementation that will need to be tested.
+
+But regardless of what methodology you follow or what level of abstraction you are at, the stages are essentially the same. Let's look at each in turn.
+
+Before you can design something, you have to understand what it is you are trying to accomplish. This is where we need requirements. These could be:
+
+ * What problem is this application supposed to solve?
+ * What kind of input data can I expect?
+ * What kind of output does it need to provide?
+ * What is a valid answer?
+ * How much time should it take?
+ * How many resources are available to it?
+ * Who are the different kinds of users who will use this?
+ * What purpose does each user have for using it?
+ * What expectations does each user have for how the software will behave?
+
+In reality, you never know the requirements up front. You probably have a vague idea, but as you write software, test it, show it to users, and get feedback, you'll quickly realize that what you thought the requirements were, and what the user really wanted, were two different things. Even the user doesn't have a perfect idea of what they want. They'll ask for one thing, but really mean something else, or not realize that what they asked for doesn't really solve their problem. This is why we make low-fidelity prototypes, """"plan to throw one away"""", and iterate with users. There will definitely be misunderstandings and mistakes; the faster we can get clarification and fix the problems, the less time and money we will waste getting to the final answer.
+
+Regardless of which iteration we are on, we now have to take our best understanding of the requirements and design our application from that. This includes deciding what the modules, classes, methods, variables, algorithms, and everything else will be. This typically involves deciding """"what"""" it will do, not necessarily """"how"""" it will do it. For example, an alarm clock might have a description like this:
+
+ * Until the user interacts with the clock, it will display the current time
+ * When the user presses the """"set"""" button, it will change into the set mode, and the time will stop counting.
+ * When in the set mode, each time the user presses the """"minute"""" button, the current minute will advance by one.
+ * When in the set mode, pressing the """"set"""" button again will save the current time and exit the set mode.
+
+There's no description here of how that will be implemented, only what the observable interaction will be. At a lower level, you might then design the classes and methods:
+
+ * class Clock:
+   * attribute: current time (date/time)
+   * method: setTime(date/time)
+   * method: getTime(date/time)
+   * method: setAlarm(date/time)
+   * method: connectAlarm(callback)
+
+And you would keep on going down and down the layers of abstraction until it you reach the point where it's obvious how to write it and it's just a matter of typing it in.
+
+That brings us to the implementation. Now that you have a solid plan for what the code will be, it's time to write it.
+
+As you write the code, you will also need to test that it does what the requirements said it should do. At the lowest level, writing unit tests is a common way for automating the testing of the code. You can also write automated tests for entire classes, as well as putting together multiple classes/modules and testing that they work properly together (integration testing), and even testing the entire flow of the application as a user would use it for a specific task (system-level testing). At the higher levels it might be difficult to write code to full automate this, so the developer and/or a tester might step through tests manually, perhaps using test harnesses or other supporting structures to help them test it more consistently and efficiently. The eventual, true test, is giving it to users.
+
+At each step along the way, you'll find mistakes. Unit tests will point out a missing case or a null pointer reference. Integration tests will point out mismatches between data formats or calling patterns. While trying to make the design, you may come up with questions that aren't answered by the requirements, forcing you to go back and elaborate on the requirements, perhaps by making a prototype and showing it to a user to get feedback. Sometimes during implementation you'll realize that there is a contradiction in the design and it can't be implemented as designed, so the design needs to be changed. Or you'll realize that the design doesn't actually fulfill the requirements. Whatever the reason, you will iterate many times, jumping back and forth between stages and levels of abstraction. Or maybe you'll give it to the user and they'll say, """"that's not what I wanted"""" and you'll have to go all the way back to changing the requirements and the changes will ripple down throughout the design and implementation.
+
+I'm not sure I can actually say how much time I spend on """"conception"""", but a rough estimate for me would be an even 3-way split between: requirements and design, implementation, testing and debugging. Note that when people make estimates for a project, they almost always think only about the implementation and they completely overlook the rest, but it makes up two-thirds of the time spent working on something.
+
+For techniques, I start something like talking to a person on the phone or in person, preferably with a whiteboard, and we talk and sketch out our ideas. This is great for both requirements and design. Depending on how many questions are left unanswered, I might then make a prototype and try it out. For a UI, this might be as simple as drawing windows on a piece of paper and asking the user to tell me what they want to do and me explaining what happens. Or I might put together a very rough program with no error handling or pleasantries that is the bare minimum needed to test my assumption or demonstrate my idea. I'll usually make notes in a notebook about what we came up with, though I would rarely make a formal document stating requirements or the design (though it entirely depends on how formal the customer wants to be).
+
+Finally, does it make a difference if it's for work or personal? Absolutely. My personal projects are typically small, non-essential, and I am my own user, so I (mostly) know my requirements upfront (though even a designer/developer doesn't always consciously know what they want). I'll be a lot less worried about strange corner cases, or integration with 3rd party tools, or ensuring that the user can't accidentally destroy all their hard work. Basically, I'll be sloppy on a personal project. But for work, you have to consider all these things.
+
+Also, the iteration times are much smaller for a personal project. If I find a bug in my own software, I'll dig into it right away and likely have it fixed in less than an hour. If a customer finds a defect in my software, I might not hear about it for weeks, and it might be days for a single iteration with them. Because of this, I'll be a lot more formal and careful when iterating with a user (since a mistake could cost days), whereas I'll be far less careful when iterating myself (since a mistake only costs minutes). This is exactly the same thing as how finding bugs in development is far cheaper than finding bugs in a released product.
+
+Basically, developing personal software is in many ways different than developing for work or for somebody else in general. The bigger the project, the more disconnected I am from the end user, and the more important it is that things work, the more I will spend on designing and testing.
+
+That said, once you get used to developing things in that careful and formal manner, you find yourself doing it for your own projects, it makes things much faster and smoother. The whole point of that extra work is that it saves you far more time later. Perhaps the costs aren't as high in a personal project, but planning, designing, and testing are still valuable investments in personal projects.
+
+I hope that answered your questions.
+
+If you want to know more, the book [Code Complete](http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670) has a great discussion on this."",[deleted],""Is the whiteboard an acquired habit, or is it somehow more useful than just using an UML/""""Mind mapping"""" program (or even photoshop)? "",Break the project into small steps.
+Code for each of these small steps.
+Link these steps. 
+Run whole sequence.
+Debug issues which arises due to linking.
+Fine tune.
+,Improvised Drawing Expanse?,""I don't do have many large projects, but I still require myself to write it all down on paper. Although sometimes I *am* lazy. 
+
+But I always start vague, then try and fill in detail, kind of make a mess of the idea on paper, organize it with arrows and keywords and circles and boxes. Organize it until I have something nice.
+
+Then implement it."",""You have to first translate all the *information* your program is trying to model into *data*.. then from there it's a lot easier. 
+
+Example: You want to represent a circle.  The information needed to represent a circle can be as simple as as a radius. But depending on your program you might need also an x and y coordinate, a x and y velocity, a color, a texture, ... and it can go on forever.  Some of data needed to represent your circle can also be a design decision as well.. For example a color can be represented by a string """"Blue"""" or a set of numbers (100, 300, 149, 255).  
+
+Thinking about (and writing down) all these pieces of data and the information they're representing is a great first step to programming every possible program.  "",""I do almost the same exact thing.  I also take pictures of the whiteboard, send them to my computer and organize the pictures themselves in oneNote to maintain my thought processes (and because my whiteboard is only 3'x2')"",[deleted],""I think you misunderstand the kind of tests involved. These are unit tests. It takes seconds to execute them. You don't send the code and tests away to QA and wait days for them to come back and tell you the tests failed. You write your code, quickly run the tests, see if they work, and if not, immediately start debugging and fixing, using the tests to guide you to where the defect is. If the tests pass, you are done and *now* you can send it to QA for further verification.
+
+Also, the idea isn't that you write a test, then mindlessly bang on the keyboard until it passes (what I think you mean by """"programs based on errors""""). The idea is that you think ahead of time about what the code should do, design a test that ensures it does it, write the code that you believe should work, and run the test to ensure it does. Without the test, you only hope it works, but you don't know. Writing tests afterwards works too, but because of """"crunch"""" people often don't have time left over for that part and code goes untested. Also, it's harder to write tests without thinking about requirements than it is to write implementations without thinking about requirements, so writing the tests first forces you to think more about designing for the requirements ahead of time, rather than writing the implementation only to realize you hadn't reconsidered a requirement and need to change the design. It's meant to save time, not make things take longer.
+
+That said, I generally don't write my tests first; I write them concurrently. I write a bit of code, then some tests, then maybe more tests for the code I'm about to write, or maybe not. Maybe, instead of writing unit tests, I build some sample data and check the output manually. Sometimes, I'll write a quick prototype to see how I think it should work, then once I think I've figured out a good design, I'll write tests, then write the proper implementation. Some things lend themselves to automated testing and some don't. I try to use whatever works best for me at the moment.
+
+At the end of the day, it doesn't matter how you get there. Clean code must be designed to requirements, it must be implemented to the design, and it must be tested to ensure it meets the requirements. How or when you do these things isn't terribly important. Some people need TDD to force them not to skip steps. Others do fine without it."",Figure out what functionality i need.
+
+Figure out data flow
+
+Code simple version of input/output data flow. Like passing around a single value to make sure it's all possible. At least with things i haven't done before.
+
+Evaluate structure of project based on evt better ways to do it.
+
+Then build/expand on this functioning skeleton.,[deleted],""Yep. It's not ideal, as the pen scratches the material a bit, but it works just fine."",""1. Pen and paper. Make notes, consider flow, and a basic description of all functionality means a lot of nouns and verbs that later become variables and function names. I don't bother with pseudo code, but prefer a general rundown of what it needs to do. Might write down a few function or class names as descriptors, and think of what needs to be passed to each.
+
+2. Start coding. Get absolute bare basic functionality, test along the way and with each change or increase in functionality. Don't worry about if it's pretty, make it work.
+
+3. Complete functionality. Confirm all is working as expected, test, add any new functionality I think of that might make it better. It's still not pretty. Start refactoring simple stuff like whitespace, variable and function names, and maybe other stuff like rewriting a few loops, or merging/separating functions where it makes sense. Start commenting code.
+
+4. Refactor all the things! Make it pretty. Make it better. Comment wherever needed and add docstrings. Fix whatever breaks while I do this. Stop when sick of doing this because this part is never really finished, ever, only abandoned.
+
+5. Repeat 1 through 4 with next project, whim, or fancy."",Smoking cigarettes and staring at the sky.,""I use a trello board and make to do lists. Then for pieces I want to implement, I make them into cards. Then, I make the logical steps into a checklist. 
+After items pass my tests I move the cards from todo to doing to testing and then to done. At the end of a sprint I archive them into their own sprint sections."",""Mine is one of the worst approach I think
+
+My coding seems mostly dictated by how much of the language I know, especially syntax
+
+I get a rough idea to approach and start coding, test it immediately and continue
+
+oh, and I am extremely lazy :("",""Yea, I think that depends on the size of the project though, and wether you want to just get started with it or it's a more important thing that you want to plan ahead of time for."",""I think this and /u/skyfoot approaches are the most logical ones. You came up with an idea, write down what you have to do to make that idea work then start coding."",""I plan on reading [**Test-Driven Development with Python**](http://www.amazon.com/Test-Driven-Development-Python-Harry-Percival/dp/1449364829/). The subtitle is """"Obey the Testing Goat: Using Django, Selenium, and JavaScript."""" I figure that the Testing Goat wouldn't steer me wrong!  
+  
+Seriously though, it got great reviews. Out of 20 reviews, only one of them wasn't a 5. I'm not even programming in Python, but looking at the table of contents, it still looks like it would be helpful."",""What languages/frameworks do you use? I imagine some are easier than others (I've had really good experiences with unit testing in Python and Qt w/ C++) but it definitely can be a lot to take in at first, especially considering it's usually thrown into most guides/tutorials as an afterthought.
+
+Once it clicks, though, it actually gets easier than not testing, from my experience. It's REALLY nice once a project starts growing to have suite of tests handy; before I learned TDD, I did have a few projects that got increasingly more difficult to maintain because bugs would creep in and I would refactor code and things would break and I wouldn't know why and it just became a bloody mess.
+
+Mind you, if it never does click, that's not the end of the world. TDD is not the One True Paradigm, everyone has their own preferred approach."",[deleted],""stop by home depot and look for white panelboard. it no longer exist on the site for some reason (bookmarked site lead to flooring tile)
+
+4 ft by 4 ft cost 35 bucks (probably less now) and I have them cut it to size so i can glue it on my desk. it's awesome and only cost 1/3 cost of the official whiteboard brand. the remaining board, I have em cut to personal size that you can fits in backpack. save a lot of paper since I can draw take pic and erase and repeat."",""I've only been coding for a couple years, definitely still a pup, so your mileage may vary, but.
+I try to think of the most simple way to do something and write it straight away. Once I get that working I start to bolt on features that make the program more complex, like decisions and options, until I get it to where it ultimately need to be.
+
+So, if I was writing a program called going to the store, my first version would be: get in car, drive to store. The next would be, walk out of house, open car door, start car, drive to store. The next would be, walk out of house, open car door, start car, take centre street, make a left on maple, make a right main, if main is congested, make a right on elm. And so on, and so forth, until I got it where I wanted. Rigorously testing along the way of course.     "",""TDD is my favorite approach. I never really liked flowcharting or mind-mapping. TDD allows me to just dive in and write tests for what I want a program to do, and allow me to keep building up the program bit by bit adding more tests along the way and running tests with each change that could break things. It's also really nice when you do have unexpected behaviors pop up, because then you can (relatively) easily narrow down what might be causing it and write more tests to isolate and fix it."",""If you have a graphics tablet, using that on a big photoshop canvas is great. It's very easy to jot down whatever you want on a whiteboard and you're not confined to what's given to you by a UML program.
+
+Also, when you're figuring out the program, it's not only about code, it's about UI, it's about what the user expects to happen, it's about common errors that you want to avoid in the future. When I write extensions for browsers, I need much more than a UML. I also tend to sketch out the process that happens in the extension right beside the process that happens in the server."",""For me, I think my approach will be different depending on the size of the problem I'm attempting to solve with the code.
+
+If I'm adding code to a pre-existing program, I'll do what I can to try to understand the """"ecosystem"""" I'm about to add something to. I'll tour around the code and make sure I have at certain level of familiarity with it. That way, instead of creating a solution in a vacuum and trying to apply that solution to a pre-existing ecosystem, I find a solution that integrates as nicely as possible into what already exists.
+
+If I'm starting something from scratch, I'll write down what I want my program to do, and try to break that down into smaller requirements. If I'm feeling particularly ambitious, the first thing I'll try to answer is """"How will I test this?"""", solve that first, and then start writing tests for the thing I'm writing before I write it. This is called """"test driven development"""".
+
+Other times, I might just start writing, with full knowledge that what I'm writing will probably get thrown away. But I'll write something to solve one part of the problem. And then write something else to solve another part. And having done that, I might start over and rewrite them both, but more integrated. I think with my personal projects, I use this technique the most - I imagine it's a bit like some people draw pictures: start with an outline, and add some things... and then erase some things that I want to correct, and solidify things that I feel good about. And eventually my program will solve the problem. And it might not be the best code in the world, but if it solves the problem, that's a pretty good state to be in.
+
+Oh - and recently, I've been taking notes as I work. I find that helps a lot for planning, and for keeping me focused on what subproblem I'm currently trying to solve (and what I've tried, hypotheses I've been testing, results, etc).
+
+That's how I do it, anyway."",""#####&amp;#009;
+
+######&amp;#009;
+
+######&amp;#009;
+
+####&amp;#009;
+
+**Code Complete: A Practical Handbook of Software Construction, Second E...** 
+
+    Current $33.34 
+       High $36.48 
+        Low $27.89 
+
+[Price History Chart and Sales Rank](http://i.imgur.com/1WL7fPr.png) | [GIF](http://i.imgur.com/mn9Pob6.gif) | [FAQ](http://www.reddit.com/r/PriceZombie/wiki/index) 
+"",""TDD and we're currently making a move towards BDD using jBehave so that we can reuse user stories for different components. "",""This is kind of my own personal way.. This is when i start a project from scratch.. Note that it's probably not the best way And i doubt many people would use this.. This first thing i do is:
+
+First: I write down the Name of the program.. lets take a game for example..(my current project) We list the name of the game.. lets call it Lauthagame.. We then list the type of game.. Let's say an FPS game..
+
+Second. We think to ourselves.. What goes into a First person shooter? So we write that down.. Shooter, FirstPerson, Objectives, Score, Network( if its a multiplayer game).. Bam
+
+Third. I'll think about what each section has.. Lets use 'Score' for this example.. So i think.. Ok so we need A) a Team Score, B) Personal Score C) Player Kills/Player Deaths/Player Assists.. D) Anything else that i haven't put in yet..
+
+Fourth.. I'll then begin by Writing down Plain english code.. EG
+
+    if player kills another player then
+
+     Dosomething here
+
+     end
+and I'll repeat this for all sections.. Once i've done the plain english versions i'll start to go over it on another sheet.. I'll then begin going through each section and think """"Will i need variables for this section, If so Name Variables and state what they are.."""" .. 
+
+Fifth. Begin to write your first piece in the IDE.. 
+
+Well I probably explained nothing and helped in no way, but that's how i do things haha"",[Xkcd]( https://imgs.xkcd.com/comics/ballmer_peak.png),""Good on you taking photos! I've been trying to use photos more and more in just about everything I do. From where I parked, to wi-fi keys on routers, or the arrangement of my cupboards when I want to clean them out. If I have to remember it or would copy something down, I take a photo. We all have cameras on us at all times so lets use it as an external memory buffer."",I use a pen and paper because I can't afford a whiteboard. Still works!
+,""I just learned about this, and it's so friggin hard to do it"",""I use a whiteboard, and draw out the execution flow (ie, what happens, with arrows), and then stare at it and think about the best way to divide it up into sections. I keep a scratch pad during this stage, as my working memory is relatively weak. 
+
+Once I've done this, I take a photo and scrub it out, and redraw the execution flow in terms of the blocks, functions, or objects I have defined, each of which written as a uml type diagram with members, functions, and connections, and systematically work through all the possible sequences of events to see if any of them end up somewhere non-useful. Repeat until I'm happy with the functionality distribution.
+
+Next, if it's really gnarly, take a photo again and start writing up pseudocode for the difficult bits. I find it much easier to plan programs when I'm not actually writing them. 
+
+Of course, this doesn't need to happen all at once. I generally do stage one and two, then go back to plan out individual classes or functions when I get to them. This also encourages me to do things the right way rather than the easy way.
+
+Tl;dr whiteboard."",""I usually write a proof of concept. I try to manage as much as features as I can into one broken application just to get a feel of time needed to implement it in the real time. Once this process is complete (about a month for larger software) or the application breaks beyond repair. We take the best parts of the app and then design a ...well, the design document outlining the core, inner and outer functionality of the software.
+
+After that, if you have a good team behind you, you can start analyzing the code and associating the tasks.
+
+Things changes a little when you have a small applications (like for pads and phones). Then it's best just to spend a week in meetings to design the app. And then take 3-4 more weeks to code it once everyone knows it's job."",""I just started to study testing, and I'm intrigued by test-driven development:  
+""""Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.""""  
+http://en.wikipedia.org/wiki/Test-driven_development  
+  
+I guess it forces you to get clear up front about exactly what it is you want to do and then encourages you to do it in an efficient way. I had always thought that the purpose of testing was just to make sure that you don't have bugs, but this strategy seems to be a planning tool as well."",Just finished up my first CS class this Thursday.  So I would say most of my programming projects were done in a blind panic with programming time crammed between mountains of homework from physics and math.
+
+And a whiteboard I picked up from walmart for $20 to figure out core logic.,""Ha, yup. Me and a friend were building a Java project for uni and got stuck on a problem with inheritance. We gave up, went to the pub and within 5 minutes of being there we had sorted it out and it was fine.
+
+OP, drink and you'll code better."",""Well, ok"",Isn't that a legit approach some companies would use? I've read somewhere that sometimes you just start something and shape it along the way instead of planning extensively.,""But nobody mentions that """"shaping"""" envolves rewriting the code 3 times a week. Not very productive."",""Ooh heres the methodology i was taught and genrally stick to.
+
+1. Write out in english what you want the program to do from beginning to end.
+
+2. Re write it in pesudo code.
+
+3. Research syntax and libraries to see whats already there for you to work with.
+
+4. Code it.
+
+Also remember even though this is a list, its okay to go back and forth between steps. You never know when you'll see an edge case, better implementation, etc."",[deleted],""I fucking hate this. This is the most inefficient and idiotic programming practice ever. This is the practice that encourages programmers to write programs based on errors and not logic.   
+It falsely presumes that programmers will wait for tests to complete before fixing the errors test provides. When in real world, once you compile the software and it goes to testing you go and take on the OTHER THINGS. You don't wait for test results. And when they do come back, if and when you fuck up (you will). There's no more time to fix the issues because you are currently developing something else . And it creates such overdraft on your (as a programmer) time schedule that we now have words like crunch."",""I just write a journal page on paper or with [Markdown](http://daringfireball.net/projects/markdown/), usually looking something like [this](https://gist.github.com/sargeant45/8c1bb18b5125634eb520). I do this to get my mind moving through ways to start working."",Get a damn specification or atleast a clear logical idea of what your supposed to be doing not some hand wavey vague bullshit printed out peice of excel with notes in the margin changed three times in sloppy handwriting. If they do this and won't give you more; WALK AWAY.,Thanks :) if only i was as good at programming as i was at planning :P,""My tasks/projects aren't that big yet, usually something that can be done in about 20 hours.
+
+My first """"thinking phase"""" is about 5 minutes and happens all in the head. For other people it might look like I'm doing nothing. Then I'll try to write some examplary prototypes in very short time. Of course they lacks many aspects, but I've experienced that I need to do this, to try things out, before I can have a real thinking or planning phase. Otherwise I am mistaken in my approach just too often.
+
+In this second planning phase I am using alot of the available time to think through possible error cases, implementation details, the system background and so on. Of course I'm using paper and boards for notes, charts etc. The final, actual implementation is often, but not always a complete rewrite and the prototypes are being dumped.
+
+Test-driven development is something that I always apply on personal projects but rarely on actual work projects. Most of the time it's about dealing with existing data/APIs/databases anyway. There are very rarely implementation bugs but comparatively many system failures (had SQL deadlocks for example, quota limits and so on)."",Good call. I made mine out of white plastic sheeting from a diy store.,""Always remember that weeks of programming saves hours of planning. "",""[Original Source](http://xkcd.com/323/)
+
+**Title:** Ballmer Peak
+
+**Title-text:** Apple uses automated schnapps IVs.
+
+[Comic Explanation](http://www.explainxkcd.com/wiki/index.php/323#Explanation)
+
+**Stats:** This comic has been referenced 635 times, representing 1.0237% of referenced xkcds.
+
+---
+^[xkcd.com](http://www.xkcd.com) ^| ^[xkcd sub](http://www.reddit.com/r/xkcd/) ^| ^[Problems/Bugs?](http://www.reddit.com/r/xkcd_transcriber/) ^| ^[Statistics](http://xkcdref.info/statistics/) ^| ^[Stop Replying](http://reddit.com/message/compose/?to=xkcd_transcriber&amp;subject=ignore%20me&amp;message=ignore%20me) ^| ^[Delete](http://reddit.com/message/compose/?to=xkcd_transcriber&amp;subject=delete&amp;message=delete%20t1_cqw6v0m)"",""&gt; How much time do you spend for your conception? 
+
+It depends on how complex the thing I'm trying to write is - anything from a few hours to several weeks.
+
+&gt; What kind of tools and techniques do you use before you actually write your first line of code?
+
+Once again, depends on the project's complexity, and if I have to communicate the design with anyone else.  I don't use special tools - probably sketch a few  block diagrams showing major object relationships using pencil and paper.
+
+&gt; Or do you just start right away?
+
+No.
+
+&gt; Does it make any difference if you're coding for work or for your private projects?
+
+No.
+"",Windows work well too!,[deleted],You and your fancy IDE.,[deleted],I think I read about that from someone who made a wall-sized whiteboard. Melamine sheets right?,""I don't have a formal process. If I'm writing a small-enough program, I just think about it for a bit until I have a general idea of what I want the overall architecture to be, then dive in and start programming.
+
+For larger projects and especially challenging maintenance tasks, I'll take out a pad of paper and draw diagrams of what I want to do. I'll work on the diagrams and revise them until I'm confident I have a good solution, then code based on what I drew. I'll refer back to my diagrams as I need to while coding because for the kinds of jobs where I need to diagram, I have a hard time keeping the while project in my head at once.
+
+I don't follow a particular style when drawing my diagrams. I make sure I understand what they mean, and that's good enough."",""I find it works better for me than any of the programs I've tried, because the process of altering and remapping things is quicker, and I find it somehow easier to think on a larger space. 
+
+I used to teach, though, so I'm very comfortable with whiteboards as a way of conveying ideas. I'm sure the mindmap programs would be just as easy if that was what I was used to.
+
+Another point to mention is that, in the industry, whiteboards are still the planning standard in an awful lot of places, and writing code on a whiteboard is still part of a lot of interviews. It's a good skill to learn."",""Hah. Replace sky with window and that's me. """
+"Java is Object oriented so it kinda lends itself to [Multi-agent systems](http://en.wikipedia.org/wiki/Multi-agent_system). A bit of a shameless plug but this is quite relevant for what I designed [JALSE](https://github.com/Ellzord/JALSE) for. It provides you a means to create a model and ticket it with actions and listeners (synchronisation is taken care of for you). If you are interested here are some [Examples](https://github.com/Ellzord/JALSE/wiki/Example-projects). 
+
+You just design your entities like you would imagine they would be in real life and everything becomes a lot easier IMO.,""Generally, you need a model of the situation at a given point in time, and some code to advance this situation to the next point in time. 
+
+So for the amusement park example, you can take a two-dimensional array representing the locations where person a and b are standing. To advance time, you write a function that takes this array, and moves person a by a square. Now you check if they found each other, and if not you apply the function again, giving you the next point in time.
+
+When you use fixed time steps, this is called a discrete event simulation, here's a more detailed explanation: http://en.wikipedia.org/wiki/Discrete_event_simulation
+
+"",""This looks really interesting, I'll definitely look into it. I have already somewhat started building it around just using different formulas and simulating that way, but it never hurts to make more than one, so I will probably start another project that uses JALSE, so thanks!"",""This is a good idea. Maybe you could work in the direction there facing and maybe they can """"see"""" so many units in front of them. The closer they are to eachother the more likely they will move toward each other. 
+
+Also if you have multiple people in the crowd then they have to step around people, and they can block your vision or something."""
+"""Ideas like this are exactly what I'm looking for thank you very much ! I want to do the work myself but I can guarantee there are hundreds like me stuck in limbo wondering what we can do with all these """"basics"""". Keep em coming ! "",""here's some of the problems from my first c++ class:
+
+fibonacci (goal is fastest solving of higher numbers)
+
+toll booth (input strings of """"seconds"""" for each car and your program solves for the total time to get all the cars through)
+
+basketball (for a given height and distance, solve for the angle and power needed to make a basket)
+
+trivia game (just a bunch of random questions the equivalent of freerice.com)
+
+and later one i did in excel but would have preferred in a programming language: make a ranking program for college football or for a smaller sport like a bowling league or tennis club. "",[deleted]"
+"""Alright, thank you again. I'll try to pick up a book about C++ and study it in the summer. "",""Looks good. Now you don't need `#include &lt;vector&gt;` any more, since you're using an array instead of a `vector` to store the periodic table. 
+
+I would still urge you to try and understand how this really works though. If you want to really learn C++, you're going to have to sit down and actually figure out how the language works. You won't learn much from just throwing together something and have people fix it for you. "",""You are declaring the vector wrong.  The correct syntax is `std::vector&lt;yourClassNameHere&gt; yourVectorNameHere;`.  You also have a problem when trying to access the element you initialized.  The vector only has one element, so `[2]` is outside the bounds of the vector (the only valid index being `[0]`).
+
+A vector is just a container for holding multiple instances of a type.  For instance, making a new variable for each element (element1, element2, element3) would not be very scale-able if you have more than just a couple elements.  A vector allows you to have one container to hold all the elements in it.  An array does the same thing, but a vector is better for most cases because you do not need to handle knowing how many items you need in it before hand.  With a vector, all the array work is done for you behind the scenes."",""If you want to have the whole periodic table, a vector would be fine with how it's set up, at least in my opinion. Another way to do it is to make a map with the symbol as the key, and a struct as the data, containing the name and weight. But as it's set up (if you're making the whole table), a vector is fine.
+
+HOWEVER, if you're just making one element, it should probably be:
+
+    Element periodic_table = {
+    
+    {""""H"""", """"Hyrdrogen"""", 1.007}
+    
+    }
+
+But that's only if you're making one element."",""Maybe it is not exactly on topic, but could someone explain to me why is OP downvoted for asking questions? I thought that this was the purpose of this subreddit..."",""Like this?
+
+
+        Elements[] 
+        {
+            // the other hydrogens are just examples
+           {""""H"""", """"Hydrogen"""", 1.007 },
+           {""""H"""", """"Hydrogen"""", 1.007 }, 
+           {""""H"""", """"Hydrogen"""", 1.007 }, 
+           {""""H"""", """"Hydrogen"""", 1.007 }, 
+           {""""H"""", """"Hydrogen"""", 1.007 }, 
+           {""""H"""", """"Hydrogen"""", 1.007 },
+           {""""H"""", """"Hydrogen"""", 1.007 }; 
+        }
+
+
+"",""Okay, I removed the array thingy, but it says this thing:
+
+               could not convert '{{""""H"""", """"Hydrogen"""", 1.0069999999999999e+0}}' from '&lt;brace-enclosed initializer list&gt;' to 'std::vector&lt;Element&gt;'"",""If you do periodic_table[2], it's looking for the *third* element in the periodic_table vector which doesn't exist because the only element is the stuff for Hydrogen. 
+
+In order to get the name, you'd have to do:
+
+    cout &lt;&lt; periodic_table[0].name;
+
+In order to print everything, you'd have to have some sort of output method in the struct."",""Mostly because he's a tard, I would think."",""Now you're trying to create an array of vectors (why?), because you have the `[]` there. Remove that, and it should work. "",What version of compiler and standard library are you using?  What command are you using to compile?  The ability to initialize a vector this way is a C++11 feature.  Your toolchain must support C++11 and you must enable that support.
+,""If he can't get a vector working, a map probably isn't going to be much easier."",""There's lots and lots of things wrong here.  Firstly, to declare a vector, you need `vector&lt;Element&gt;`, not the other way around.  The thing in the brackets is the template type parameters.  Vector is parametrized on the type of element being stored (among other things), which is why it's `vector&lt;Element&gt;`.
+
+Secondly, a vector is a replacement for an array.  You don't want an array of vectors, you want a vector.
+
+    vector&lt;Element&gt; periodic_table = { { """"H"""", """"Hydrogen"""", 1.007 } };
+
+Notice that a semicolon is required at the end of the declaration.
+
+Third, you cannot access `periodic_table[2]`.  (And it's not `periodic_Table`.  Case matters.)  You've initialized this vector with only a single element, so the only legal index is zero.
+
+Fourth, you never defined an overloaded operator `&lt;&lt;` for the type `Element`, so you can't write `cout &lt;&lt; periodic_table[0]`.  You haven't defined how that would work.  If you want to access the name, you have to do that explicitly:
+
+    cout &lt;&lt; periodic_table[0].name &lt;&lt; '\n';
+
+"",""No. I think you've biting over too much if you can't get an array definition right. I don't mean to be offensive in any way, I just think you should go back and review the basics of creating variables and arrays before you try to make structs and vectors, etc. This is *really* basic stuff.
+
+Now, to the code: The syntax of creating an array is `type name[] { initial values };` (you can also skip `=` between `name[]` and the initialiser list on C++11/14). This will create an array with a size equal to the number of values in the initialiser list. Right now you don't have a type. To create an array of elements called Elements, this should work:
+
+    Element Elements[] =
+    {
+        // the other hydrogens are just examples
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 }
+    };
+
+Notice that I also removed the semicolon at the last element of the initialiser list. In a very similar way you can create a `vector` called Elements like this:
+
+    vector&lt;Element&gt; Elements =
+    {
+        // the other hydrogens are just examples
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 }, 
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 }
+    };
+
+EDIT: I added `=` in the definitions, since it seems you're not compiling C++11/14."",""Code::Blocks is an IDE, not a compiler.  If you're using gcc or clang, you'll want to add something like `-std=c++11` to your compilation command.  It would be better to enable C++14 mode though, which you can do with `-std=c++14`, although if you're using an older version you'll need `-std=c++1y` instead.  If you haven't set any other flags, you might want to research that, because the defaults are pretty lousy.  I recommend something like
+
+    g++ -Wall -Wextra -pedantic -std=c++14 -g -O2 -D_GLIBCXX_DEBUG foo.cpp -o foo
+
+`-D_GLIBCXX_DEBUG` enables the debug version of the standard library, if you're using libstdc++.  (There's a similar one if you're using libc++ from LLVM.)  You'd want to obviously remove that for release builds because it adds overhead, but it's great for catching errors, such as invalid iterators, out of range indices, etc.
+"",""You are still trying to declare an array of vectors, when you want a single vector.  Look carefully at what I wrote.
+"",""This is the third time you're posting about the very same thing. [Last time](https://www.reddit.com/r/learnprogramming/comments/3692zo/c_using_a_structure_to_make_a_collection_of/) your program *had* a vector of elements. Now you've replaced `vector&lt;Element&gt;` with `Element&lt;vector&gt;` which won't work. But in addition, you've made an array out of these vectors too?
+
+What exactly is it you're trying to do here? If you want to simply have a collection of the elements, you can use an array `Element[] = { ... elements here ... };`, or you can use a `vector` like you did before. It makes no sense to have an array of vectors or a vector of arrays. Which one to prefer depends on what you're going to do with the elements? 
+
+"",""Thank you so much! Now I re-wrote my program again and it seems to work perfectly.
+
+        #include &lt;iostream&gt;
+        #include &lt;vector&gt;
+
+        using namespace std;
+
+        struct Element
+        {
+            string symbol;
+            string name;
+            double mass;
+        };
+
+        int main()
+        {
+
+
+    Element periodic_Table[] =
+    {
+        // the other hydrogens are just examples
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 },
+       {""""H"""", """"Hydrogen"""", 1.007 }
+    };
+            cout &lt;&lt; periodic_Table[0].name &lt;&lt; '\n';
+            return 0;
+
+        }
+
+ "",""Thank you for fixing my mistake, really appreciate it, but  I have one more question - is a vector necessary here?"",""Yeah, this questions are quite noobie-like, but still, no reason to hate him for being a noob."",&gt; it shows an error while compiling
+
+The exact error please...,""Thank you for a good reply, I re-made the program a little bit , but now it says this error:       
+
+
+
+         could not convert '{""""H"""", """"Hydrogen"""", 1.0069999999999999e+0}' from '&lt;brace- enclosed initializer list&gt;' to 'std::vector&lt;Element&gt;'   
+
+
+Here is the current code
+
+    #include &lt;iostream&gt;
+    #include &lt;vector&gt;
+
+    using namespace std;
+
+    struct Element
+    {
+        string symbol;
+        string name;
+        double mass;
+    };
+
+    int main()
+    {
+        vector&lt;Element&gt;periodic_Table[]={
+        {""""H"""", """"Hydrogen"""", 1.007 }
+
+
+
+
+
+        };
+        cout &lt;&lt; periodic_Table[0].name &lt;&lt; '\n';
+        return 0;
+
+    }
+"",""Err, I am using CodeBlocks 13.12, how do I enable that C++11 feature?"",How come no one has recommended std::map here?,Element is not a template."
+"""The Coursera classes on R are good. "",""After finishing the course I can agree, I did find their manuals from their site. Seems like a powerful language to know
+
+http://cran.r-project.org/manuals.html
+
+"",+1 to Datacamp. I learned tons from it.,I enjoyed [Datacamp](https://www.datacamp.com/courses).  I thought it was a nice introduction.  I'm not sure after that.,""I am taking it now, and their is not a lot of programming or thinking involved. It is more type in what they tell you. I actually came to this subreddit with the same question as op because I felt like codeschool was not enough for me to start more extensive projects."",[rseek.org](http://rseek.org/)
+,""&gt;search-engine unfriendly
+
+Add """"cran"""" to your search. Also, google has a dedicated r-search. On mobile now, can't remember the exact url 
+
+"",The hardest thing about trying to learn r is that it's name is so search-engine unfriendly,""I'm currently taking the Johns Hopkins course on Coursera and I agree that it's a decent course to learn R, but I would *definitely* not recommend it for someone with no programming background like OP."",""Generally, you should start replicating things which you know how to do in Excel, but use your other language.  For the record, I tend to prefer python for that sort of thing.  PM me if you want more detail."",""I work with R a good bit.  I'd recommend that OP downloads RStudio, the best IDE available for the language and then checks out Hadley Wickham's book on the R graphics package *ggplot2*.  I think working with graphics (especially time series with reference to econometrics) is a good way to get immediate functionality out of the language.  As you learn to create graphic outputs, you necessarily have to seek out complimentary functions for handling data.  
+
+When I learned, the trick was to find common tasks that I might do in excel and then seek out how to do these in R (think small manageable items, sorting alphabetically, running descriptive statistics, replacing values). Doing this sort of thing translates into success later on when getting deeper in analytical programming. 
+
+Here's something to start learning with:
+
+This is the function for calculating the square root of a number:
+
+    sqrt()
+
+If you type and run:
+
+    ?sqrt
+
+R returns a help file on how to use the sqrt function. At the bottom of every help file is an example that uses data already provided with R. 
+
+If you type and run this without an input value:
+
+    sqrt()
+
+It returns the calculations behind the sqrt function.  You can copy and paste this into a new script, make changes to it, and see what happens.  Try altering the code so that it returns a cubed root.  
+
+Best of luck. R is entirely worth the initial learning curve.
+
+
+"",""Your best bet to get started is to find an online course or two, John's Hopkins has one on Coursera that's decent. There are others of course.
+
+There seem to be a lack of """"Learn R in 24 hours"""" type books, but I haven't looked very hard. 
+
+Beyond that, it's really just getting some data and playing with it in new and interesting ways. [Data.gov](www.data.gov) has a lot. R also comes with some data sets you can load. Or, and this is a big part of learning to work with data, think of something that interests you and go hunting for the data. "",""I've started using [swirl](http://swirlstats.com/), which is an interactive way to learn the basics of R, in a similar way to Codecademy. 
+
+From what I can gather, swirl bases its materials on the Coursera series of courses on R, so you could try both. "",Haven't finished the codeschool course but all of the other courses I have taken have been worth the time. 
+
+http://tryr.codeschool.com/levels/1/challenges/1,""Add """"in R"""" to your search terms. E.g.
+
+Standard Deviation in R
+
+Categorical Analysis in R
+
+Email in R
+
+"""
+"oh my good someone made a typo *on the internet*
+
+better point it out!
+
+edit: typo,""I would recommend """"Head First C#"""" if you want to get exposed small projects and not fall asleep during the process.  Pair it with another book that can take you slightly deeper like """"C# in a nutshell"""".  After you get exposed to the fundamentals, get a pluralsight subscription as they have everything .NET related from some of the leaders in the industry.  Depending on where your interests lay, you'll hear about other books you think would be interesting along the way.  Just think like a hacker and start coding projects that have a straightforward purpose.
+
+Also, CodingBlocks.net is a fun podcast for C# developers.  I highly recommend them and it's a good way to get your mind thinking when you're unable to code or to pick you up when you've just studied for way too many days in a row and need to not look at a screen. "",Oh yeah of course! I was thinking of Express.
+
+Wow this is too awesome. Visual Studio for free. That's amazing.,""This is a list I made for another thread, you may find it useful.
+
+In addition to this, download Visual Studio community Edition for a decent IDE.
+
+If you also have the money, Pluralsight is something I would recommend to anyone. Their training libraries are fantastic for almost anyone, especially beginners.
+
+Here, **bold** are ones I would say undoubtedly get.
+
+**Beginner**
+
+* **[C# Yellow Book](http://www.robmiles.com/c-yellow-book/)** FREE
+* **[Data Structures and Algorithms: Annotated Reference with Examples](http://dotnetslackers.com/projects/Data-Structures-And-Algorithms/)** FREE
+* **[C# Players Guide](http://www.amazon.com/The-Players-Guide-RB-Whitaker/dp/0985580100)**
+ 
+**Beginner-Intermediate** 
+
+* **[Essential C# 5](http://www.amazon.com/dp/0321877586/)**
+* **[C# Programming Language](http://www.amazon.com/dp/0321741765/)**
+
+**Intermediate-Advanced/Referance**
+
+* **[C# 5.0 In A Nutshell](http://www.amazon.com/dp/1449320104)**
+* [C# In Depth, 3rd Edition](http://www.amazon.com/dp/161729134X/)
+* [Pro C# 5.0](http://www.amazon.com/dp/1430242337)
+
+**Program Design and Best Practices**
+
+* **[Design Patterns: Elements of Reusable Object-Orientated Software](http://www.amazon.com/dp/0201633612/)**
+* **[Code Complete: A Practical Handbook](http://www.amazon.com/dp/0735619670)**
+* [Clean Code: A Handbook of Agile Software Craftsmanship](http://www.amazon.com/dp/0132350882/)
+* [The Clean Coder: A Code of Conduct for Professional Programmers](http://www.amazon.com/dp/0137081073)
+
+**Game Programming And Design**
+
+* **[Game Programming Patterns](http://www.amazon.com/Game-Programming-Patterns-Robert-Nystrom/dp/0990582906)**
+* [3D Math Primer For Graphics And Game Development](http://www.amazon.com/dp/1556229119)
+* [Game Coding Complete, Fourth Edition](http://www.amazon.com/dp/1133776574/)
+* [Fundamentals of Game Design \(2nd Edition\)]
+(http://www.amazon.com/dp/0321643372)
+* [Game AI Pro: Collected Wisdom of Game AI Professionals](http://www.amazon.com/dp/1466565969)
+* [Introduction to Game Design, Prototyping, and Development: From Concept to Playable Game with Unity and C#](http://www.amazon.com/dp/0321933168)
+
+**Advanced Game Programming**
+
+* **[Real-Time Collision Detection](http://www.amazon.com/dp/1558607323)**
+* [Game Engine Architecture, Second Edition](http://www.amazon.com/dp/1466560010)
+* [Collision Detection in Interactive 3D Environments](http://www.amazon.com/dp/155860801X)
+
+Special mention in advanced are **Game Programming Gems 1-4** as well as **AI Game Programming Wisdom 1-4**"",""You. To the timeout chair, go, right now. "",""Wow, I looked at this post to find a good starting point for myself, as I start Uni in september and I want to go in prepared. So I downloaded the pdf, opened it up and BAM, university of Hull, the university I'm going to. Awesome!"",""/u/JDProgramming has a great C# course on Udemy, if you don't have much programming experience. https://www.udemy.com/understandingc/?couponCode=redditdiscount70
+
+Microsoft's Virtual Academy C# tutorial is also good, though a little more advanced http://www.microsoftvirtualacademy.com/training-courses/developer-training-with-programming-in-c"",""Start with c#
+
+No need to learn C as they are very different languages.  /r/csharp has some beginner info in the side bar. The yellow book is a god place to start to give you some fundamentals. End of the day its kind of boring, but necessary. 
+
+Once you have a decent understanding of variables, loops, classes, basic OOP theory the best way to learn IMO is to start working on a project that interests you. Use google to help figure it out, but also as you are presented with a new problem use it as a rabbit hole to learn new things. Make sure you understand why something works not just copy and pasting code you find. 
+
+Its not going to be easy but stick with it and things will eventually fall into place. "",""While C is an interesting and certainly useful language to learn (despite its age, it's still in broad use), if C# is what you want to learn, I'd say to start off with C#. The folks over at /r/csharp can help you pretty well. Just take note though that until Win10 releases, you're best off sticking to Windows. With Win10, MS is making .NET less platform dependent with official OSX and Linux versions."",Visualize? Yes. But I feel like most programming in Unity is extending their main class (MonoBehavior? I can't remember) and might not be as good a practice as maybe trying to learn how to make a web page. What are you trying to do?,""Definitely recommend that a beginner avoid that second Microsoft Virtual Academy link.  Despite how the title sounds, it's not meant for beginners to get a """"jump start"""" on C# programming.  It's meant for people who are studying for one of the Microsoft certification exams on C#.  
+
+So the first few hours deal with fundamentals... but from the perspective of discussing nooks-and-crannies that are on the exam, but which self-taught developers might have never fully thought about.  Then in the second half it leaps into some pretty esoteric material on garbage collection patterns and other such topics, which 90+% of developers will never need (but it's on the certification exam)."",""""""fun"""" a very subjective word there. Maybe the OP could check out 3dBuzz.com that's where I started and they have some """"fun"""" beginner VTMs for free."",""If you like video games or maybe you've played ultima online... there is a really good emulator for the game called runuo. It's all written in c# and there is a strong community (serveuo,old runuo forums,vita core). 
+
+I suggest downloading the game (free from the official game website ) the emulator (runuo from github) and getting used to it a bit. You can see good example code in what is already in the game and make things and see them in the game w/o having to mess with artwork or other mehanics like that.   There are a ton of servers out there for it so lots of devs and support for code in forums. Pm if you want to talk more about it or any help.
+
+Edit: maybe this is a bit more advanced but still might be helpful or fun to look at. I started coding as a wee lad with c# on a runuo server, memories... "",[deleted],[Pluralsight](http://www.pluralsight.com/) made me jump from a java developer to .NET. I learned so much using their courses it was insane. It's expensive only if you don't use it. I basically went from zero to expert within 2 years after watching all of their videos.,There really is no point to learn C first if you want to learn C# afterwards.
+
+Only time I'd ever recommend C is when you wanna move into C++,""It's not too late to get started with EdX's free C# course by Microsoft, so that might be an option! (But it might be a close call)
+
+Edit: While visual studio is nice, my personal opinion would be to start off on Xamarin and later transition into VS. Xamarin is simpler to get started on, and is better suited for small, tutorial/homework sized projects IMHO."",""Search for Microsoft Dvlup rewards. They have challenges like create an app using our camera sdk , using bing sdk and so on where you have to use one of their sdk ( read API ) to create any type of app for windows phone and they reward you in gadgets , vouchers and other things. I've won 3 devices from it :)"",""Personally, I learned C# right after mastering Lua. The drawback from this however is that C# is OOP, while Lua is not. As a starting point, i'd go on youtube and watch Bob Tabor's introduction to C# series, it helped me a lot. Here's the link: https://www.youtube.com/watch?v=w7GfjQlHh08
+Since it's only an introduction series, there are things you are going to have to pick up yourself, like attributes and async methods, however this video series helped me a ton. Hope this helps!"",I started a few days ago with this tutorial. 
+
+http://csharp.net-tutorials.com/basics/introduction/
+
+Very basic and good to follow. I dont know how good the whole thing is though. Maybe it helps.,&gt; ...is a god place ...
+
+Typo much...,[deleted],Who cares. It's not like someone is going to stop you from using VS one day. It's the best.,""If you have the free time available, then I recommend checking out all of the C#-related material on MVA.  It's free, after all!
+
+However, it really is geared toward prep for a very specific certification exam.  Meaning that you'll probably pick up on some interesting things that you didn't know about, and your eyes will probably glaze over during other segments.  Don't feel like you're beholden to the agenda, and can't skip over things."",""The wiki is open for editing by people who have enough comment karma in this sub. It is not necessary for a mod to add all content.
+
+At the time I was helping seed the wiki with content I simply didn't know any reputable C# resources, having never formally tried to learn the language myself. But I'll try to go through this post when I'm not on my phone and add some.
+
+Hopefully someone beats me to it :)"",""Visual Studio does have a free version, but honestly if you can afford it, pay for the commercial version.
+
+It's an unrivaled piece of software, and makes your life a lot easier esp. when you're programming in a MS language like C#. The IntelliSense tool, the analyzer, and the debugging utilities massively improve productivity. At least for me."",Do I have to? Can I take my iPod?,""Good way to visualize OOP, but not C#.  It's actually a pretty bad place to start IMO.  Mainly because it adds an extra difficulty layer.  On the unity boards we see it all the time people come in and are confused by the most basic concepts.
+
+Since most things you do inherit from monobehavior several things will throw you off
+1) you are in a constant loop
+2) initialization is very different your class is a game object component which means you initialize it by creating the game object or adding a component to an existing gameobject
+3) no constructors have to fake it with Start and Awake
+4) everything is a field you almost never use properties even though you expose the fields
+5) calling other monobehavior classes is very different than normal c# 
+
+If you start there and do nothing else you'll still have to relearn the correct way to do things if you venture out of Unity.  IMO it's better to learn the other way because it's easier to get your head around the unity way while not throwing you off if you do something outside of Unity."",""My favorite videos are the Codegasm videos by [Barnacules.](https://www.youtube.com/playlist?list=PLEbaEyM-xt9mVQEAXGlRRmbO2Qp_oqF-n) Even though C# was my first language, looking back I'd probably start with Ruby though. Do that on [Codeacademy.](http://www.codecademy.com/en/tracks/ruby)"",""You won't believe but C# has the best resources for learning over the internet. Hands down. Visual Studio Community edition is free + Microsoft Virtual Academy is free + Microsoft DreamSpark/BizSpark + Azure free allowance + Github along with Microsoft + chance to earn lumia's .... the list will go on. You wouldn't have to buy a damn thing and you already have best resources. Now microsoft , if only you did this for c++ :(
+
+Links are here , Yay! 
+
+1. https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
+
+2. https://www.visualstudio.com/en-us/products/free-developer-offers-vs.aspx
+
+3. http://www.microsoftvirtualacademy.com/
+
+4. https://www.dreamspark.com/
+
+5. http://azure.microsoft.com/en-in/pricing/free-trial/
+
+6. https://enterprise.github.com/microsoft
+
+7. https://rewards.msdn.microsoft.com/signin
+
+8. https://degreed.com/"",I'm sorry if there's a problem with link. You can try *googling* out azure and try signing up from there.,""Congratulations on wanting to learn c#! It is a great language. I moved from Visual Basic to c# about a year ago and haven't looked back since. I really enjoy coding in this language. I took a c and a c++ class as well. While there are similarities, I think learning them too close to each other(time wise) might get a little confusing. Good luck!"",""Do they include IntelliSense? Not word completion, as they're a bit different.
+
+But yeah I agree - for starting out the free versions will do.
+
+And if you're a student, your school is probably in a program with microsoft, which gains you access to all dev. tool for free."",""I completely agree. While Jerry Nix is an amazing teacher, those courses are not the best to begin from.
+
+I think these is what OP meant to link to instead:
+
+http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners"",""Pretty sure VS has always included IntelliSense, you might be thinking of something else maybe?"",""Well, make sure you
+
+    return true;
+"",""Or when you need to do systems level work. Knowing C can be useful in pretty much whatever you do, even if you don't use it directly."",""&gt; chance to earn lumia's
+
+Where is this at? Sorry, couldn't find it in your links.
+"",""Intentional, or my posts get too large."",""I'm learning C# and I find visual studio so, so good as a beginner. It's so helpful that I wonder if I'm not becoming reliant on it and when I move on to something else it will cost me or something."",[deleted],""Was just giving the bot shit, though this is quite an intelligent bot."",... how the hell did you get a summer job in a position where you don't know the language?,The free version includes all of those features I think. Don't really think there is any point for someone who is just starting out to pay for VS.,https://www.youtube.com/playlist?list=PLSGIJi1SszlH4ebTEtfVANI3Qf11o14sr,""From my experience, take baby steps. Syntax from JAVA to C# is about the same. What really still gets me, even to this day, is learning the basics, and once you understand the basic and terminology, it becomes a bit more understandable. Learning C or C++, I can tell you right now, is going to be very difficult from learning C# and JAVA because C# and JAVA both have garbage collection and can allocate the necessary memory you need, whereas, in C and C++ **you** need to allocate the correct memory for your program so that it doesn't crash. Object Oriented Programming, recursion, I/O is all the same throughout any programming language. In my intro software engineering class I learned about the 80/20 rule. This rule states that """"you get 80% of the results from 20% of the work"""", in terms of programming languages, you can learn 20% of programming languages to complete the other 80% of the work you are trying to do. No need to learn ALL programming languages. In speaking language, if we learn Latin, you can pretty much speak any other foreign language that includes Latin as the root."",""Been using Unity and c# for some months now, however started a group project creating a employee management program in C# and visual studios, using MVCs etc.
+
+
+I mostly use Unity because it's FUN, i'm not sure I learn so much about real programming(What I will work with, won't be a gameprogrammer) 
+
+I'd say it's pretty different but i'm a novice."",""You do see the irony in using the phrase """"oh my god"""" to express yourself, right."",I've found c# to provide me the most fun :),""Microsoft's C# tutorials are great. My .NET professor actually just makes us go through the tutorials, you end up learning a lot and actually making some cool programs."",truedat.,""There is a great place to start simply at the Microsoft Development Network """"C# for beginners"""". Only thing I'd suggest is getting visual Studio 2013 Community Edition. From there I would highly suggest learning J Query then Java Script then either Angular JS or Bootstrap. You will/should also to pick up HTML5 &amp; CSS. You can do the latter on Code Academy or a pay service like tree house. It is really about building projects &amp; understanding what you are building. "",""There is nothing fun about a language that depends on white space for structure. (Python)
+
+Love me some C#. Download Visual Studio, select Console project, and dive in. "",tutsplus is pretty awesome and I can say it played the biggest role in teaching myself web development. It's not free but you can get a month for fifteen bucks and knock out most of them.
+
+http://code.tutsplus.com/courses/30-days-to-learn-c
+
+They haven't spent too many resources on C# but they're starting to build up their library.
+
+https://code.tutsplus.com/categories/c/courses
+,Does anyone else recommend Unity as an environment to visualize C# programming?,""Didn't see this mentioned and I don't think a lot of people remember this, but FYI Visual Studio is now free.  
+
+https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
+
+Other people pointed out that learning C or even C++ isn't really beneficial to learning C# in terms of any sort of building block.  
+
+This is more of just an FYI on your way to learning it, as VS is an awesome IDE for C#.
+
+Good luck.
+
+**E:** I guess there's still some people that aren't aware of this edition yet.  Community edition was released [6 months ago]( https://www.visualstudio.com/en-us/news/vs2013-community-vs.aspx) and [""""offers all the great functionality of the professional version""""]( https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)"",""I will say this: There is now a 2015 community edition. I don't know how much better/worse it is, but that is what I installed to learn it, and now I'm here trying to learn it!"",""No. Unity's classes come straight from the bowels of hell. Unity was made for unityscript. (Though, I still use JS..  ;)  )"",IIRC Microsoft is having a C# course on edx.,Is it just me or the sign-up for Azure is not working?,""C can come in handy, its great for teaching data structures, design patterns, and algorithms, but c# can be learned without knowing c first. 
+
+Microsoft has some fantastic C# for absolute beginners courses on the MVA and also pluralsight offers small trials (enough to get through 1 course) if you want to go that route, "",Why are you people downvoting this? This is a very good couple of question.,I would love a senior C# programmer with Unity experience to answer this. A valid learning tool?,""You're starting in September, I finish in June :p you're gonna enjoy it."",I can personally attest to that this course works great: https://www.udemy.com/programming-for-complete-beginners-in-csharp/
+
+By virtue of having taken it myself and now knowing C#.,""Community Edition is identical to the commercial version, you're thinking of Express.  This was released not too long ago, spread the word."",""Thanks, i hope so. I just finished a year with open university, which I used as my entry requirement. My time with OU really helped me figure out exactly what it was I wanted to do."",edit: trying to figure it out.
+
+,You missed a few.,I think good starting point is Rob Miles C# Yellow Book. About 8 hours and you know bare minimum to write (almost) any program.,""It depends, have you any experience in Java? if so that great! As C# follows a similar style that Java does and would make learning it really easy. If not, then don't worry, just start with C#. There are plenty of tutorials out there that can help with learning it. I would even advise getting a book on it if you can handle reading about the language too. Microsoft usually has lots of tutorials and lessons on C# too. http://www.microsoftvirtualacademy.com/training-courses/c-fundamentals-for-absolute-beginners is what Microsoft seems to offer in C# tutorials, which seems like a good starting point."",""I should replied here instead of below, but just to make sure its seen the Community edition is technically [identical to the commercial versions]( https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs).
+
+The things it doesn't """"include"""" are simply other services you have access through via MSDN, such as foundation server and what have you, but even if you set those up separately Community edition still supports them."",""So if you want your kid to be awesome at something, name them [Robert Miles](http://en.wikipedia.org/wiki/Children_%28Robert_Miles_song%29)."",Head First C# is hands down the best book to learn C# from: http://shop.oreilly.com/product/0636920027812.do,""BASIC, VB, C, C#, C++, Java, doesn't matter your tools, just make something. Do you fuss about which knife you use to cut your vegetables? Just stick a fork in it and move on to your second project! Have an idea of what you want to make and make it using whichever of the languages """"feels right"""" to you. I started off in VB6, then VB.net, decided I liked C#."",""&gt;Later we will consider the use of unit tests which make this much easier. 
+
+... next mention of """"unit test"""" is in the glossary. :|"",""Oh wow!! How do I save this? Maybe I'll just leave this comment, so I can find it again :D"",DAE le edgy atheism,""Would you recommend it for, say, someone who just finished Microsoft's EdX course on C#? It looks like a good, structured way to delve deeper into the language."",""I didn't down vote this (rather the opposite) but I think the reason why is because some of the information is available in the FAQ.
+
+&gt; C# is not based on C in any technical sense. C# is a general purpose language designed by Microsoft and is similar in many ways to Java. It compiles down to an intermediate form which runs in a virtual machine (CLR), unlike the previous three languages which are all compiled to native machine code. While C# borrows syntactic elements from C and C++ (as does Java), it has no real technical relation to those languages.
+
+As for resources, /r/learnprogramming doesn't have anything related to C# at all. Python, C, C++, Ruby, etc is everywhere and in the FAQ but there is not a single C# resource to be located. I just hope an admin (*cough /u/trpcicm or /u/zzyzzyxx *cough) gets wind of this and adds it."",You do realise it's just an expression and not a literal statement?,#####&amp;#009;
+
+######&amp;#009;
+
+######&amp;#009;
+
+####&amp;#009;
+
+**The C# Player's Guide** 
+
+    Current $21.33 
+       High $24.99 
+        Low $17.42 
+
+[Price History Chart and Sales Rank](http://i.imgur.com/40JJVbL.png) | [GIF](http://i.imgur.com/1bGjgwo.gif)
+#####&amp;#009;
+
+######&amp;#009;
+
+######&amp;#009;
+
+####&amp;#009;
+
+**Essential C# 5.0 (4th Edition) (Microsoft Windows Development Series)** 
+
+    Current $40.89 
+       High $43.67 
+        Low $40.88 
+
+[Price History Chart and Sales Rank](http://i.imgur.com/JilVebp.png) | [GIF](http://i.imgur.com/lR2jlsD.gif)
+#####&amp;#009;
+
+######&amp;#009;
+
+######&amp;#009;
+
+####&amp;#009;
+
+**The C# Programming Language (Covering C# 4.0) (4th Edition) (Microsoft...** 
+
+    Current $32.47 
+       High $32.47 
+        Low $25.25 
+
+[Price History Chart and Sales Rank](http://i.imgur.com/ANLalqB.png) | [GIF](http://i.imgur.com/YDUBLi3.gif) | [FAQ](http://www.reddit.com/r/PriceZombie/wiki/index) 
+,""Unity or not the 30 days course is over seven hours of video of actual code with explanations of the very basics and fundamentals of the language. Can't see any reason anyone would invalidate it.
+
+I'm self taught and have been working professionally for four years. It helped me tremendously in the beginning and their more advanced courses on C# have helped me recently. "",""My first start was just using WinForms it's pretty easy to grasp and then worked up to looking at WPF.  My suggestion is just choose a project that sounds fun to you.  Decide what kind of thing you want to create and do.  I took a class but there was so much freedom I learned the most from just trying to do different things. "",""I didn't install it mostly because my projects were written with 2013 in mind but learning the new features of 2015 is on my summer to do list. "",""Didn't want to start new thread, so figured I'd ask here, hope You don't mind it, guys:
+Does it make any sense to do Bob Tabor's MVA C# for Absolute Beginners and top it with """"The Yellow Book""""? I did the MVA lessons and they left me somewhat lacking. I feel I need to brush up a little on the basics before I move onto WPF. And what do You suggest for learning WPF btw?
+"",""&gt; The yellow book
+
+I can confirm the yellow book is the place to be if you want to start programming in C#, written by my own first year lecturer Rob Miles! Whilst having his guidance helps throughout, it should be easy enough to pick up everything just from the book.
+
+You can get it for free [here]( http://www.robmiles.com/s/Rob-Miles-CSharp-Yellow-Book-2014-m2e4.pdf)!"",well you're in luck that I saw this post. I'm learning too and have a good bit of it known at this point. Been all over the internet looking at this and that and I can say by far that the guy with a 100 video series on youtube is the best thing you'll come across the audio sucks in the first few but gets much better I suggest earbuds or speakers if you can't hear it well enough to start
+
+https://www.youtube.com/watch?v=SXmVym6L8dw&amp;list=PLAC325451207E3105"
+"""&gt;  if it hits one of the two edges it becomes stuck there.
+
+get the cannon stuck and then step though that section with a debugger and find out why it becomes stuck, and why your input won't free it."",""Time to practice using a debugger or w/e, working backward from incorrect values of `rotationAngle`. Lots of red flags but this jumps out:
+
+    // HERE IS WHERE I CHECK THE BOUNDS
+    if (rotationAngle &gt; 88.0f &amp;&amp; rotationAngle &lt; 272.0f)
+        rotationAngle = 88.0f;
+    else
+        m_vAimDirection = newDirection;
+
+as far as I can tell `rotationAngle` is a temporary value and `m_vAimDirection` is the persistent one. (?) If that's right you're only correcting the temporary value and letting the persistent one go out of range. That doesn't fully explain the behaviour but it starts to.
+
+There's other suspicious things like the calculation for `newDirection` and the rotation check but I'm not sure they're contributing to this problem. Can I suggest that this might be easier if you work with one rotation value throughout instead of going back and forth between different representations?"""
+"""Access is part of Microsoft office,  it's not like a programmed database,  but it has database features.  With it you can make tables, relationships, set index, etc.  yes you can make a table or modify it in SQL but you don't need too."",Learn to be an excel power user.  That should be all that's required to do it.  You can even shut off/hide the ribbon!  Userforms are where it's at!
+
+Excel is the fastest way to get started.  Later you can reverse-engineer the c#/java way of doing it,Are you asking how do I use ASP.NET and C# together?,""I hosted the website on our companies local server, but go daddy, network solutions and other hosting companies will let you do it for cheap. Or you can make your own web server with an old computer. It's quite simple to host it actually. If you are using your own Web server you need the IIS software on the server, there a lot of resources for setting that up (I'm on mobile right now so I can't link a resource). It's fairly straight forward. 
+
+I actually made the whole site 100% with ASP.NET with no themes. I initially made the website with raw asp and I looked kinda clunky so I used bootstrap to make things look a little nicer (although, it is a business application so it didn't need to be anything special. Design isn't my strong suit). I personally find asp extremely easy to make websites with. Once you get the hang of CSS and utilizing the benefits of bootstrap it become easy to make things quickly. 
+
+Also, on a side note. If you are using a database to display and modify data there a lot of great tools available in asp such as the list view, grid view, and being able to populate data from a database into drop down and such. 
+
+If you have any other question feel free to ask. I should be home on my computer later and can elaborate more."",""May I ask:
+
+* Where and how did you host this?
+
+* Can you share any resources that helped you plan/design/build/deploy it?
+
+Also...I've used ASP a bit and always use the """"out of the box"""" theme.  Did you do any custom design work to make things look pretty?  How difficult was it with ASP?
+
+Sorry to ask you so many questions!"",yea. how do u use one language then for the same project use another one? i dont mean using databases to store crap tho,""Almost any language could do this, the best would probably be something Object Oriented with good GUI support. C# or JAVA would be my first go-to's
+
+As far as where to learn C# and Java: Side bar -&gt;"",""I just finished a very similar project. I used C# in combination with ASP.NET, to create a web application.
+
+The reason being is because lots of the people that are using this software are computer illiterate like you stated above. Having the application in the web browser makes it nice and easy for the user who doesn't know how to use a computer. It's just another website for them.
+
+Also, personally I find that doing the styling for business type web applications is fairly easy, in that you don't need fancy animations, just cut and dry data.
+
+If you are planning on having a database behind this application SQL Server is free and integrates very very very easy with ASP and C#.
+ "",Well asp.net is the front end languages that scripts how the website looks. And c# is the server code (what happens when you click a buttons. That sort of thing)
+
+When using asp.net to develop websites in visual studio the pages come default with an asp and a c# file to work in.,Yes! That's exactly it! :) Where do I get Access and easy is it to use for database creation?,""You could use pretty much any language.  C# with Visual Studio Community Edition would probably be my first pick.  You could also crank something out in Python, for example."",""Look into a subscription to Lynda.com and check out the C# Essential Training course, as well as the Visual Studio Essential Training course.
+
+The courses are not that long, they're at your own pace, and they gives you a ton of knowledge in a short period of time from a well-versed instructor.  You should be ready to pump out the program within a couple weeks (or whenever you're through enough of the information you need to complete the course.
+
+I've tried a lot of different books, guides, and videos, but Lynda.com has trumped them all when it comes to learning new techs."",""Access is just about the simplest thing to use for full-fledged databases, but really, you can do everything you want in Excel.  I knew a guy who built a whole door-ordering system in only excel.
+
+Want to create a database?  That's just a table that you can query.
+
+Want to write code?  add the developer tab in the options menu and write VBA.
+
+Have something repetitive that you'd like to do?  Record a macro.
+
+Need to create a user interface?  Userforms!  It stores data in the spreadsheet(s), and you can create rules for how to interact with the data.
+
+Best part?  You can likely do all of this with the free version of this: LibreOffice/google drive (which is javascript)."",""how do u combine stuff 2 languages? "",""Consult the side bar for an FAQ of the range of tutorials, books, and other resources for learning a variety of languages. "",""Awesome. :) Thanks!
+
+I don't mind spending a little time with a book, but I also don't want to take more than two weeks to at least code a Hello World version of this thing.
+
+Where do you recommend I start learning? :) Or if you know of any program-building software? (#meta)"",""If she's that bad she should probably stick with pencil and paper and have someone enter it into something like QuickBooks. QuickBooks has an online version you can give a go free for a month.  At the least you would see what sorts of things you might need to recreate.      
+
+Don't want to discourage you, but mixing learning programming from scratch with your mom's bakery business sounds like a recipe for disaster (apologies for the pun).  Be prepared to be tech support 24/7."",""Honestly, you could write a commandline or GUI program for this. Python has built in functionality to work with CSV files for exporting to excel.
+
+That said though, really you'd be better served helping your mom learn excel. Just set up any macro fields for summing totals and so forth for her, but for sheer data entry, I've seen people who can't find their keyboard from their chair work with Excel. 
+
+Otherwise, she'd be best working on paper entries or whatever her current system is. This isn't a personal project, it's a business, and if not done right, you could either cripple the business, or even in the best case failure, double her workload."",""Thanks for the info.  I'll take a look in to setting up my own server, and utilizing Bootstrap - that's a great idea.
+
+When you were designing the ASP front/back end work, did you do much design work with UML to plan and visualize the different classes/methods/etc?  Also curious if you used anything like an ERD to design the databases?
+
+I'm asking the design questions because I rarely see folks use those approaches and more or less create things organically.  I have a hard time just coding without much design prep and would love to learn if you had to spend much time in this area.
+
+Thanks again for the feedback."",""This project actually started as a school project, so we designed everything from scratch. 
+
+I highly recommend that you learn how to utilize bootstrap, it has made my life so much easier, it also makes it much easier to make responsive websites.
+
+To answer your questions:
+
+For the design of the front end we kind of just asked our employer what they wanted it to look like. Most of the website's input forms are copies of paper forms the employees fill out, so we just duplicated that. For the design of the rest, it is fairly basic (kinda like a banking website, or something similar). We did not use UML, but we did sit down before hand and found what our employer needed, and how he wanted it. From there we mapped out how we wanted to approach the problem. Albeit, it was our first time making a piece of software like this, so there where many things we over looked.
+
+To design our database we looked at the paper forms that our employer was already using, and we went through the basic normalization steps. Once the site was up and running we did some little changes with the database until it was what we were looking for.
+
+For the whole design process I would very much recommend sitting down with whoever the software is for and see what they want in person, how they want it, and what their ideas of how it should look like are. I would not even touch your IDE until you have sat down and done some planning, basic design, and an in person sit down with the client."",""Ya, while this is a programming sub excel and access might work better.  Access would work better if you want a simple data base which you could create queries and forums that your mother could input data onto."",I think c# would be a better option given that the IDE of Visual Studio is one of the best out there as compared to what is available for Java when it comes to UI"
+"""So doing things in C tends to be more complex than other languages, which is why they advise only using the NDK when necessary. 
+
+That being said feel free to disregard this warning if you don't feel like learning a new language."",""As has been mentioned, C will be really cumbersome to use if you're going to write an app. Since you're not familiar with other languages, it is a bit hard to explain why, but it basically boils down to the fact that C is a really simple language. It doesn't offer you many means of abstraction and handling complexity, it has very basic built-in types,  and it doesn't offer you a standard library with many data structures (hash tables, strings, lists, sets, etc.) ready to use. All of these things make you spend a lot of time """"down in the trenches"""" dealing with low level details instead of focusing on the bigger picture. There are many libraries available to make you do just about anything in C, but using those will be a lot more painful for this reason. 
+
+However, what you have learned about C is definitely not a waste. First of all, your C knowledge will be important if you're ever going to write software for embedded systems or do low level development (Linux kernel for instance) - and it also equips you with knowledge of details about the machine (memory, pointers, etc.) that you wouldn't have if you learned in a higher level language. I don't know how much you've gone through, but that kind of insight is useful even when working in a different language. And as already mentioned, many of the concepts will transfer easily to other languages. For instance, both C++ and Objective C are based (kind of) on the same type system, memory model, etc. as C. "",""the point of cs50 is to give you fundamentals in programming not to teach you C, you learned how to use C to program. Most of that knowledge will transfer over when you learn a new language. There will be some new concepts but once you learn those, those will transfer over when you learn another language. For example if you learn java you'll be able to pick up objective-c much faster, and vice-versa because they are both object oriented languages and share a lot of common ideas and methodologies.
+
+objective c for iOS is a language that strictly builds on top of C. java for android is a bit different, try both and see which you like more. I'd try to find a course on object oriented programming."",Thanks for the great reply! I really appreciate it. This is the info I need to decide on my next steps :),Those are not native languages?,Thanks for the detailed explanation! I'm really looking forward to my next steps after completing the course.,""Thanks for the suggestion!
+
+This worries me a bit though:
+&gt;In general, you should only use the NDK if it is essential to your app—never because you simply prefer to program in C/C++.
+
+Because I'm still very inexperienced and a beginner, my app ideas aren't too complex."",Take a look at the Android NDK (http://developer.android.com/tools/sdk/ndk/index.html). This will let you develop android apps in C.
+
+iOS is locked down to Objective C and Swift. I doubt they would ever allow a native app.,""C is not useless. By learning C you have a great foundation to learn almost every programming language, because you now know about memory management on a rather low level.
+
+Java would be an easy transition from C. You would have to learn how to code with classes (object oriented), but if you are familiar with structs in C, you can think of a class as roughly a struct that you can declare functions inside that have access to the members of the struct. These functions are called methods.
+
+In java you won't be dealing with pointer arithmetic or dereferencing, because all your variables except the primitives (int, float, long, etc) are pointers (some exceptions, for example String is copied when used as parameter). Java implicitly dereferences the pointers for you when you access an object (an instance of a class). Also you won't have to worry about freeing up memory, because of javas garbage collector. To allocate memory for a new object, you use the new operator and call the constructor of the class which is basically a function inside your class that creates an object for you.
+
+Example of allocating memory for an object in C vs Java:
+
+C:
+
+    MyType* object = malloc(sizeof(MyType));
+
+Java:
+
+    MyType object = new MyType();
+
+MyType in C would in this case be a user defined type (typedef), maybe a struct. MyType in java would be a class and MyType() would be its constructor.
+
+I have never tried Objective-C, but according to the [wikipedia page](http://en.wikipedia.org/wiki/Objective-C) it is basically C with an object oriented layer on top. You can write C code in Objective C."",Thanks for the suggestion. I'll probably do that.,I see. Fair enough. Thanks for the suggestion :)"
+"""Simpsons rule is a numerical method for integration, similar to the trapezium rule but more accurate. If you're interested in that sort of thing, you might want to look up [Euler's method](http://en.wikipedia.org/wiki/Euler_method) and [RK4](http://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods). These are numerical methods for solving ordinary differential equations. They're similar to the integration methods, which is why they're commonly called *integrators* but they handle a more general class of problems - if you're looking to write a physics simulation, this is the sort of thing you need.
+
+Symbolic integration is sometimes possible but *extremely* difficult. I still can't get my head around it, but [here's the link](http://en.wikipedia.org/wiki/Risch_algorithm).
