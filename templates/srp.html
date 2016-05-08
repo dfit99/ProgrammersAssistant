@@ -6,9 +6,8 @@
     <div class="list-group">
         {% for n in my_list %}
         <a href="#" class="list-group-item active">
-            {{n['_source']['source_code']}}
-            <h4 class="list-group-item-heading">{{n['_source']['body']}} <span class="badge">{{n['_score']}}</span></h4>
-
+            <h4 class="list-group-item-heading">{{n['_source']['source_code']}} <span class="badge">{{n['_score']}}</span></h4>
+            {{n['_source']['body']}}
         </a>
         {% endfor %}
 
