@@ -3,14 +3,22 @@
 <br>
 <p>Results: {{total}}</p>
 <ul>
-    <div class="list-group">
-        {% for n in my_list %}
-        <a href="#" class="list-group-item active">
-            <h4 class="list-group-item-heading">{{n['_source']['source_code']}} <span class="badge">{{n['_score']}}</span></h4>
-            {{n['_source']['body']}}
-        </a>
-        {% endfor %}
+    <div class="container" style="=background: blue;">
+        <div class="list-group">
+            {% for n in my_list %}
+            <a href="#" class="list-group-item">
 
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 list-group-item-heading">
+                    <span class="badge">{{n['_score']}}</span>
+                </div>
+                <p  class="list-group-item-text" style="white-space: pre-line">
+                    <pre> {{n['_source']['body']}}</pre>
+                    </p>
+                </a>
+
+                {% endfor %}
+
+        </div>
     </div>
 
 </ul>

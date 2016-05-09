@@ -29,13 +29,13 @@ class BuildIndex:
 
     def bulk_insert(self): #insert all documents from the movies json
         actions = []
-        with open("may_2015.csv", 'r', encoding='utf8') as datafile:
-            csv_file_obj = csv.reader(datafile)
-            csv.field_size_limit(500 * 1024 * 1024)
-            for row in csv_file_obj:
-                v = {'body': row, 'source_code': testLanguageCode.get_languages(row)}
-                actions.append(self.format_action(v)) #add new document into array
-            [print(action)for action in actions]
+        for i in range(1, 13):
+            with open("month"+str(i)+".csv", 'r', encoding='utf8') as datafile:
+                csv_file_obj = csv.reader(datafile)
+                csv.field_size_limit(500 * 1024 * 1024)
+                for row in csv_file_obj:
+                    v = {'body': row, 'source_code': testLanguageCode.get_languages(row)}
+                    actions.append(self.format_action(v)) #add new document into array
         return helpers.bulk(self.es, actions, stats_only=True) #perform bulk insert Input: array of nested dictionaries
 
 
