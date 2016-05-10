@@ -1,6 +1,6 @@
 import nltk
 
-syntax = {"String", "int", "for" "public", "private", "void", "def", "[]", "//"}
+syntax = {"String", "int", "for" "public", "private","}", "{" ,"print", "void", "def", "[]","//"}
 
 
 def programming_features(document):

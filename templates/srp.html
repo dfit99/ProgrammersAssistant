@@ -11,15 +11,22 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 list-group-item-heading">
                     <span class="badge">{{n['_score']}}</span>
                 </div>
-                <p  class="list-group-item-text" style="white-space: pre-line">
+                <p class="list-group-item-text" style="white-space: pre-line">
                     language? {{n['_source']['language']}}
                     Source? {{n['_source']['source_code']}}
 
-                    <pre> {{n['_source']['body']}}</pre>
-                    </p>
-                </a>
+                <pre> {{n['_source']['body']}}</pre>
+                </p>
+                <form class="navbar-form navbar-left" role="search" method="post" action="search">
+                    <div class="form-group">
+                        <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+                    </div>
+                    <input type="hidden" name="type" value="docs">
+                    <button type="submit" class="btn btn-default">Next</button>
+                </form>
+            </a>
 
-                {% endfor %}
+            {% endfor %}
 
         </div>
     </div>

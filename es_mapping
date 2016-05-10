@@ -25,6 +25,10 @@
                 "source_code": {"type": "boolean", "index_options": "offsets"},
                 "language":  {"type": "string", "index_options": "offsets"}
             }
+        },
+        "dcocs":{
+
         }
+
     }
 }
