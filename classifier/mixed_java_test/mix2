@@ -1,0 +1,14 @@
+ public static void main(final String[] args) {
+        if (args.length != 1) {
+            throw new java.lang.IllegalArgumentException();
+        }
+
+        int k = Integer.parseInt(args[0]);
+
+
+ cowardly rascals that ran from the battle ha' done
+	this slaughter: besides, they have burned and
+	carried away all that was in the king's tent;
+	wherefore the king, most worthily, hath caused every
+	soldier to cut his prisoner's throat. O, 'tis a
+	gallant king!

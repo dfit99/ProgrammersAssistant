@@ -1,0 +1,54 @@
+	It is not well done, mark you now take the tales out
+	of my mouth, ere it is made and finished. I speak
+	but in the figures and comparisons of it: as
+	Alexander killed his friend Cleitus, being in his
+	ales and his cups; so also Harry Monmouth, being in
+	his right wits and his good judgments, turned away
+	the fat knight with the great belly-doublet: he
+	was full of jests, and gipes, and knaveries, and
+	mocks; I have forgot his name.
+
+
+    def span_tokenize(self, text):
+        self._check_regexp()
+
+        if self._gaps:
+            for left, right in regexp_span_tokenize(text, self._regexp):
+                if not (self._discard_empty and left == right):
+                    yield left, right
+        else:
+            for m in re.finditer(self._regexp, text):
+                yield m.span()
+
+GOWER	Sir John Falstaff.
+
+FLUELLEN	That is he: I'll tell you there is good men porn at Monmouth.
+
+GOWER	Here comes his majesty.
+
+	[Alarum. Enter KING HENRY, and forces; WARWICK,
+	GLOUCESTER, EXETER, and others]
+
+KING HENRY V	I was not angry since I came to France
+	Until this instant. Take a trumpet, herald;
+	Ride thou unto the horsemen on yon hill:
+	If they will fight with us, bid them come down,
+	Or void the field; they do offend our sight:
+	If they'll do neither, we will come to them,
+	And make them skirr away, as swift as stones
+	Enforced from the old Assyrian slings:
+	Besides, we'll cut the throats of those we have,
+	And not a man of them that we shall take
+	Shall taste our mercy. Go and tell them so.
+
+
+
+    def _annotate_second_pass(self, tokens):
+        """
+        Performs a token-based classification (section 4) over the given
+        tokens, making use of the orthographic heuristic (4.1.1), collocation
+        heuristic (4.1.2) and frequent sentence starter heuristic (4.1.3).
+        """
+        for t1, t2 in _pair_iter(tokens):
+            self._second_pass_annotation(t1, t2)
+            yield t1

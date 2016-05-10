@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 import json, csv
 import testLanguageCode
-import classifier
+import classification
 import sys
 
 reload(sys)
@@ -34,10 +34,10 @@ class BuildIndex:
         }
 
     def bulk_insert(self):  # insert all documents from the movies json
-        model = classifier.train()
+        model = classification.train()
 
         actions = []
-        for i in range(1, 2):
+        for i in range(1, 13):
             with open("month" + str(i) + ".csv", 'rb') as datafile:
                 print i
                 csv_file_obj = csv.reader(datafile)
@@ -45,7 +45,7 @@ class BuildIndex:
                 for row in csv_file_obj:
                     try:
                         v = {'body': '\n'.join(row), 'source_code': testLanguageCode.get_languages(row),
-                         'language': classifier.classify(model, row)}
+                         'language': classification.classify(model, row)}
                     except UnicodeDecodeError:
                         print "unicode error"
 

@@ -1,0 +1,63 @@
+    def span_tokenize(self, s):
+        if self._blanklines == 'keep':
+            for span in string_span_tokenize(s, r'\n'):
+                yield span
+        else:
+            for span in regexp_span_tokenize(s, r'\n(\s+\n)*'):
+                yield span
+
+
+
+
+    I come to thee for charitable licence,
+	That we may wander o'er this bloody field
+	To look our dead, and then to bury them;
+	To sort our nobles from our common men.
+	For many of our princes--woe the while!--
+	Lie drown'd and soak'd in mercenary blood;
+	So do our vulgar drench their peasant limbs
+	In blood of princes; and their wounded steeds
+	Fret fetlock deep in gore and with wild rage
+	Yerk out their armed heels at their dead masters,
+	Killing them twice. O, give us leave, great king,
+	To view the field in safety and dispose
+
+
+
+	def calc_dist(self, lang, trigram, text_profile):
+        ''' Calculate the "out-of-place" measure between the
+            text and language profile for a single trigram '''
+
+        lang_fd = self._corpus.lang_freq(lang)
+        dist = 0
+
+        if trigram in lang_fd:
+            idx_lang_profile = list(lang_fd.keys()).index(trigram)
+            idx_text = list(text_profile.keys()).index(trigram)
+
+            #print(idx_lang_profile, ", ", idx_text)
+            dist = abs(idx_lang_profile - idx_text)
+        else:
+            # Arbitrary but should be larger than
+            # any possible trigram file length
+            # in terms of total lines
+            if PY3:
+                dist = maxsize
+            else:
+                dist = maxint
+
+        return dist
+
+    def lang_dists(self, text):
+        ''' Calculate the "out-of-place" measure between
+            the text and all languages '''
+
+        distances = {}
+        profile = self.profile(text)
+        # For all the languages
+        for lang in self._corpus._all_lang_freq.keys():
+            # Calculate distance metric for every trigram in
+            # input text to be identified
+            lang_dist = 0
+            for trigram in profile:
+                lang_dist += self.calc_dist(lang, trigram, profile)
