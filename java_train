@@ -323,6 +323,19 @@ public class Arrays {
         sort2(a, fromIndex, toIndex);
     }
 
+    for(int i
+    for(int
+    for ( int
+    for( int
+    i++)
+    i--)
+    i++)
+    i--
+    i++ )
+    i-- )
+
+
+
     /**
      * Sorts the specified array of floats into ascending numerical order.
      * <p>

@@ -12,6 +12,9 @@
                     <span class="badge">{{n['_score']}}</span>
                 </div>
                 <p  class="list-group-item-text" style="white-space: pre-line">
+                    language? {{n['_source']['language']}}
+                    Source? {{n['_source']['source_code']}}
+
                     <pre> {{n['_source']['body']}}</pre>
                     </p>
                 </a>

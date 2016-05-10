@@ -22,7 +22,8 @@
         "posts": {
             "properties": {
                 "body": {"type": "string", "analyzer": "snowball_analyzer", "index_options": "offsets"},
-                "source_code": {"type": "boolean", "index_options": "offsets"}
+                "source_code": {"type": "boolean", "index_options": "offsets"},
+                "language":  {"type": "string", "index_options": "offsets"}
             }
         }
     }

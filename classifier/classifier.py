@@ -10,6 +10,7 @@ def programming_features(document):
 
     for word in syntax:
         features['contains({})'.format(word)] = (word in document_words)
+    print features
 
 
 
