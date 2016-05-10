@@ -1,9 +1,8 @@
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 import json
-import re
 
-INDEX_NAME = 'programmers_assistant'
+INDEX_NAME = 'may_2015'
 DOC_TYPE = 'posts'
 ES = Elasticsearch()
 
@@ -18,6 +17,24 @@ def q_field(key, value): #returns match for key value pair
     }})
     return ES.search(index=INDEX_NAME, doc_type=DOC_TYPE, body=query)
 
+# def q_field(key, value):  # returns match for key value pair
+#     query = json.dumps({"query": {
+#         "function_score": {
+#             "query": {"match": {key: {'query': value, 'operator': 'and'}},
+#                       },
+#             "boost_mode": "multiply",
+#             "functions": [
+#                 {
+#                     # "filter": {'source_code': True},
+#                  "script_score": {
+#                         "script": "_score  * 1.5"
+#                     }
+#                 }],
+#
+#         }
+#
+#     }})
+#     return ES.search(index=INDEX_NAME, doc_type=DOC_TYPE, body=query)
 
 
 from flask import Flask, render_template
@@ -35,19 +52,10 @@ def page_not_found(e):
 def srp():
     query = request.form['Search']
 
-    results = q_field('body', query )
-    #print(q_total())
-    total = (results['hits']['total'])  # get total hits count
-    new_res = []
-    res = results['hits']['hits']
-    #test = ["\\\n\nwtf this should be escaped \n\n why oh why is this being ignored?","hey you yeah you \t what are you\'re thoughts on socialism"]
-    for i in res:
-        thread =  i['_source']['body'].encode('ascii','ignore')
-        #print thread, "\n\n", thread.__class__
-        new_res.append(thread)
-
-    return render_template('srp.html', total=total,  my_list=new_res)
-
+    results = q_field('body', query)
+    print(q_total())
+    total = str(results['hits']['total'])  # get total hits count
+    return render_template('srp.html', total=total, my_list=results['hits']['hits'])
 
 
 @app.route("/")
