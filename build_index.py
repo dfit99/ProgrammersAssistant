@@ -29,20 +29,33 @@ class BuildIndex:
 
     def bulk_insert(self): #insert all documents from the movies json
         actions = []
-        with open("may_2015.csv", 'r', encoding='utf8') as datafile:
+        with open("may_2015.csv", 'r') as datafile:
             csv_file_obj = csv.reader(datafile)
             csv.field_size_limit(500 * 1024 * 1024)
+            i = 0
             for row in csv_file_obj:
-                v = {'body': row, 'source_code': testLanguageCode.get_languages(row)}
-                actions.append(self.format_action(v)) #add new document into array
-            [print(action)for action in actions]
+
+                    try:
+                        for comment in row:
+                            print comment, "!!!",i,"\n\n"
+                            encoded = comment.encode('utf-8')
+
+                            v = {'body': encoded, 'source_code': testLanguageCode.get_languages(row)}
+                            actions.append(self.format_action(v)) #add new document into array
+                            i+=1
+                    except:
+                        #print comment, "failed!", "\n\n"
+                        #encoding failed!
+                        pass
+
+            #[print(action)for action in actions]
         return helpers.bulk(self.es, actions, stats_only=True) #perform bulk insert Input: array of nested dictionaries
 
 
 
 if __name__ == '__main__':
     import sys
-    new_index = BuildIndex('may_2015',SCHEMA) #take index name from command line
+    new_index = BuildIndex('programmers_assistant',SCHEMA) #take index name from command line
     new_index.delete_index()
     new_index.init_index()
     new_index.bulk_insert()

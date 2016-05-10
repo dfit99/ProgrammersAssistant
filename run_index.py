@@ -1,8 +1,9 @@
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 import json
+import re
 
-INDEX_NAME = 'may_2015'
+INDEX_NAME = 'programmers_assistant'
 DOC_TYPE = 'posts'
 ES = Elasticsearch()
 
@@ -34,9 +35,17 @@ def srp():
     query = request.form['Search']
 
     results = q_field('body', query )
-    print(q_total())
-    total = str(results['hits']['total'])  # get total hits count
-    return render_template('srp.html', total=total,  my_list=results['hits']['hits'])
+    #print(q_total())
+    total = (results['hits']['total'])  # get total hits count
+    new_res = []
+    res = results['hits']['hits']
+    #test = ["\\\n\nwtf this should be escaped \n\n why oh why is this being ignored?","hey you yeah you \t what are you\'re thoughts on socialism"]
+    for i in res:
+        thread =  i['_source']['body'].encode('ascii','ignore')
+        #print thread, "\n\n", thread.__class__
+        new_res.append(thread)
+    
+    return render_template('srp.html', total=total,  my_list=new_res)
 
 
 @app.route("/")
