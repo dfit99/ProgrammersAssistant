@@ -4,6 +4,8 @@ import json, csv
 import testLanguageCode
 import classification
 import sys
+from test_doc import parse_python_docs, parse_java_docs
+import pprint
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -23,7 +25,7 @@ class BuildIndex:
     def delete_index(self, indices="*"):  # clear all indices for hygiene purposes
         self.es.indices.delete(indices)
 
-    def format_action(self, value):  # insertion helper
+    def format_comment(self, value):  # insertion helper
         return {
             '_op_type': 'create',
             "_index": self.index_name,
@@ -32,12 +34,22 @@ class BuildIndex:
             "source_code": value.get("source_code", False),
             "language": value.get("language", 'English')
         }
+    def format_documentation(self, name,description,title,language):  # insertion helper
+        return {
+            '_op_type': 'create',
+            "_index": self.index_name,
+            "_type": "methods",
+            "name": name,
+            "description": description,
+            "title":title,
+            "language": language
+        }
 
     def bulk_insert(self):  # insert all documents from the movies json
         model = classification.train()
 
         actions = []
-        for i in range(1, 13):
+        for i in range(1, 2):
             with open("month" + str(i) + ".csv", 'rb') as datafile:
                 print i
                 csv_file_obj = csv.reader(datafile)
@@ -49,15 +61,38 @@ class BuildIndex:
                     except UnicodeDecodeError:
                         print "unicode error"
 
-                    actions.append(self.format_action(v))  # add new document into array
+                    actions.append(self.format_comment(v))  # add new document into array
+        python_dict = parse_python_docs()
+        for key in python_dict:
+            name = key
+            document = python_dict[key]
+            for method in document:
+                description = document[method]
+                actions.append(self.format_documentation(method,description,name,"python"))
+        java_dict = parse_java_docs()
+        for key in java_dict:
+            name = key
+            document = java_dict[key]
+            for method in document:
+                description = document[method]
+                actions.append(self.format_documentation(method,description,name,"java"))            
+
         return helpers.bulk(self.es, actions,
                             stats_only=True)  # perform bulk insert Input: array of nested dictionaries
 
 
+
+
+def test_doc():
+    python_dict = parse_python_docs()
+    pp = pprint.PrettyPrinter(indent=4)
+    #pp.pprint(python_dict)
+    print python_dict.keys()
 if __name__ == '__main__':
     import sys
 
     new_index = BuildIndex('may_2015', SCHEMA)  # take index name from command line
     new_index.delete_index()
     new_index.init_index()
+    #test_doc()
     new_index.bulk_insert()

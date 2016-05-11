@@ -9,7 +9,7 @@ ES = Elasticsearch()
 
 def q_total(size=0):  # returns total count for all docs
     query = json.dumps({"query": {"match_all": {}}})
-    return ES.count(index=INDEX_NAME, doc_type=DOC_TYPE, body=query)
+    return ES.count(index=INDEX_NAME, doc_type='methods', body=query)
 
 def q_field(body, language, doc_type='posts', offset=0, size=10): #returns match for key value pair
     if language is not None:
@@ -29,7 +29,7 @@ def q_field(body, language, doc_type='posts', offset=0, size=10): #returns match
         "query": {"match": {"body": {'query': body}},
 
         }})
-    return ES.search(index=INDEX_NAME, doc_type=doc_type, body=query)
+    return ES.search(index=INDEX_NAME, doc_type="methods", body=query)
 
 # def q_field(key, value):  # returns match for key value pair
 #     query = json.dumps({"query": {
@@ -80,7 +80,7 @@ def srp():
     except KeyError:
         language = None
 
-
+    print q_total()
     results = q_field(query,language, type, offset)
     total = str(results['hits']['total'])  # get total hits count
     offset= int(offset) + 10
