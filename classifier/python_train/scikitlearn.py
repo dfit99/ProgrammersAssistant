@@ -4,7 +4,7 @@
 # URL: <http://nltk.org/>
 # For license information, see LICENSE.TXT
 """
-scikit-learn (http://scikit-learn.org) is a machine learning library for
+scikit-learn (http://scikit-learn.org) is a machine learning corpusi for
 Python. It supports many classification algorithms, including SVMs,
 Naive Bayes, logistic regression (MaxEnt) and decision trees.
 

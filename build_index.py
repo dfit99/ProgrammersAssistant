@@ -1,11 +1,10 @@
+#Daniel Fiterman and Jerry Wang
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 import json, csv
-import testLanguageCode
 import classification
 import sys
 from doc_parser import parse_python_docs, parse_java_docs
-import pprint
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -25,16 +24,15 @@ class BuildIndex:
     def delete_index(self, indices="*"):  # clear all indices for hygiene purposes
         self.es.indices.delete(indices)
 
-    def format_comment(self, value):  # insertion helper
+    def format_comment(self, value):  # insertion helper for comments/posts
         return {
             '_op_type': 'create',
             "_index": self.index_name,
             "_type": "posts",
             "body": value.get("body", ""),
-            "source_code": value.get("source_code", False),
             "language": value.get("language", 'English')
         }
-    def format_documentation(self, name,description,title,language):  # insertion helper
+    def format_documentation(self, name,description,title,language):  # insertion helper for documenation/methods
         return {
             '_op_type': 'create',
             "_index": self.index_name,
@@ -45,22 +43,23 @@ class BuildIndex:
             "language": language
         }
 
-    def bulk_insert(self):  # insert all documents from the movies json
+    def bulk_insert(self):  # insert all documents from the corpus
         model = classification.train()
 
         actions = []
         for i in range(1, 13):
-            with open("month" + str(i) + ".csv", 'rb') as datafile:
+            with open("corpusi/reddit/month" + str(i) + ".csv", 'rb') as datafile:
                 csv_file_obj = csv.reader(datafile)
                 csv.field_size_limit(500 * 1024 * 1024)
                 for row in csv_file_obj:
                     try:
-                        v = {'body': '\n'.join(row), 'source_code': testLanguageCode.get_languages(row),
+                        v = {'body': '\n'.join(row),
                          'language': classification.classify(model, row)}
                     except UnicodeDecodeError:
                         print "unicode error"
 
                     actions.append(self.format_comment(v))  # add new document into array
+        #now parse and insert the documentation, python then java
         python_dict = parse_python_docs()
         for key in python_dict:
             name = key

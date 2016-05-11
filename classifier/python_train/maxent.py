@@ -1340,7 +1340,7 @@ def train_maxent_classifier_with_megam(train_toks, trace=3, encoding=None,
                                        **kwargs):
     """
     Train a new ``ConditionalExponentialClassifier``, using the given
-    training samples, using the external ``megam`` library.  This
+    training samples, using the external ``megam`` corpusi.  This
     ``ConditionalExponentialClassifier`` will encode the model that
     maximizes entropy from all the models that are empirically
     consistent with ``train_toks``.
