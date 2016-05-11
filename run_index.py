@@ -13,7 +13,6 @@ def q_total(size=0):  # returns total count for all docs
 
 def q_field(body, language, doc_type='posts', offset=0, size=10): #returns match for key value pair
     if language is not None:
-        print language
         query = json.dumps({"from" : offset, "size" : size,
                             "query":  {"bool" : {
         "must" : {
@@ -23,6 +22,9 @@ def q_field(body, language, doc_type='posts', offset=0, size=10): #returns match
             "term" : { "language" : language }
         },
 
+        }}, "highlight": {
+        "fields" : {
+            "body" : {}
         }}})
     else:
         query = json.dumps({"from" : offset, "size" : size,
