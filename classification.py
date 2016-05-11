@@ -1,5 +1,7 @@
+#Daniel Fiterman
 import nltk
 
+#features list or programming/english words
 syntax = {"String", "int", "for" "public", ":", ";" "private", "void", "def", "[]", "//",
           "yield", "raise", "return", "pass", "exec", "del", "lambda", "elif",
           "const", "char","float","implements", "interface", "long",
@@ -7,18 +9,20 @@ syntax = {"String", "int", "for" "public", ":", ";" "private", "void", "def", "[
           "break", "the","of","to","a",
           }
 
-
+#extracts the features used by the classifier
 def programming_features(document):
     features = {}
     document_words = [nltk.word_tokenize(line) for line in document]
     document_words = [val for sublist in document_words for val in sublist]
 
+    #testing for for the features list (syntax)
     for word in syntax:
         features['contains({})'.format(word)] = (word in document_words)
 
     return features
 
-
+#trains classifer on training documents, only needs to be called onces
+#Trains on python corpus, java corpus and english language corpus
 def train():
     import os
     train_set = []
@@ -38,11 +42,13 @@ def train():
 
     return classifier
 
-
+#spits a label for each inputed document
 def classify(classifier, document):
     return classifier.classify(programming_features(document))
 
 
+#used for testing purposes, helps fine tune the parameters
+#outputs accuracy score
 def test(classifier):
     import os
     test_set = []

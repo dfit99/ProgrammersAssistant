@@ -1,3 +1,4 @@
+#Jerry Wang
 import os
 from os import path
 import pprint
@@ -31,9 +32,9 @@ def parse_java_text(full_text, text_name):
 #parse through the python documentation and collect methods+descriptions for each document, return as dict
 def parse_python_docs():
     doc_dict={}
-    for filename in os.listdir("library/python"):
+    for filename in os.listdir("corpusi/python"):
 
-        filepath = path.relpath('library/python/'+filename)
+        filepath = path.relpath('corpusi/python/'+filename)
         with open(filepath, 'r') as k:
             method_header = False
             txt_tag = filename.find(".txt")
@@ -57,7 +58,7 @@ def parse_python_docs():
 #parse through the java documentation and collect methods + descriptions for each java doc, return as dict
 def parse_java_docs():
     java_dict={}
-    for path, dirs, files in os.walk("library/java/"):
+    for path, dirs, files in os.walk("corpusi/java/"):
         for filename in files:
             fullpath = os.path.join(path, filename)
             with open(fullpath, 'r') as f:
