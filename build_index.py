@@ -49,7 +49,7 @@ class BuildIndex:
         model = classification.train()
 
         actions = []
-        for i in range(1, 2):
+        for i in range(1, 13):
             with open("month" + str(i) + ".csv", 'rb') as datafile:
                 csv_file_obj = csv.reader(datafile)
                 csv.field_size_limit(500 * 1024 * 1024)

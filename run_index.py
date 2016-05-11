@@ -23,17 +23,10 @@ def q_field(body, language, doc_type='posts', offset=0, size=10):  # returns mat
                                     "term": {"language": language}
                                 },
 
-                            }}, "highlight": {
-                "fields": {
-                    "body": {}
-                }}})
+                            }}})
     else:
         query = json.dumps({"from": offset, "size": size,
-                            "query": {"match": {"body": {'query': body}}}, "highlight": {
-                "fields": {
-                    "body": {}
-                }}
-
+                            "query": {"match": {"body": {'query': body}}}
                             })
     return ES.search(index=INDEX_NAME, doc_type=doc_type, body=query)
 
@@ -50,16 +43,10 @@ def q_field_methods(description, language, doc_type='methods', offset=0, size=10
                                     "term": {"language": language}
                                 },
 
-                            }}, "highlight": {
-                "fields": {
-                    "description": {}
-                }}})
+                            }}})
     else:
         query = json.dumps({"from": offset, "size": size,
-                            "query": {"match": {"description": {'query': description}}}, "highlight": {
-                "fields": {
-                    "description": {}
-                }}
+                            "query": {"match": {"description": {'query': description}}}
 
                             })
     return ES.search(index=INDEX_NAME, doc_type=doc_type, body=query)
@@ -98,48 +85,51 @@ def page_not_found(e):
 
 @app.route("/search", methods=["POST"])
 def srp():
-    query = request.form['Search']
-
     try:
-        type = request.form['type']
-    except KeyError:
-        type = 'posts'
-    try:
-        offset = request.form['offset']
-    except KeyError:
-        offset = 0
+        query = request.form['Search']
 
-    try:
-        language = request.form['language']
-    except KeyError:
-        language = None
-    try:
-        type = request.form['type']
-    except KeyError:
-        type = "posts"
+        try:
+            type = request.form['type']
+        except KeyError:
+            type = 'posts'
+        try:
+            offset = request.form['offset']
+        except KeyError:
+            offset = 0
 
-    if type == 'posts':
-        results = q_field(query, language, type, offset)
-    else:
-        results = q_field_methods(query, language, type, offset)
+        try:
+            language = request.form['language']
+        except KeyError:
+            language = None
+        try:
+            type = request.form['type']
+        except KeyError:
+            type = "posts"
 
-    total = str(results['hits']['total'])  # get total hits count
-    offset = int(offset) + 10
+        if type == 'posts':
+            results = q_field(query, language, type, offset)
+        else:
+            results = q_field_methods(query, language, type, offset)
 
-    if type == "posts":
-        return render_template('srp.html', type=type, total=total, raw=query, language=language, offset=offset,
-                               my_list=results['hits']['hits'])
+        total = str(results['hits']['total'])  # get total hits count
+        offset = int(offset) + 10
+
+        if type == "posts":
+            return render_template('srp.html', type=type, total=total, raw=query, language=language, offset=offset,
+                                   my_list=results['hits']['hits'])
+    except Exception:
+        abort(405)
     return render_template('srp2.html', type=type, total=total, raw=query, language=language, offset=offset,
                            my_list=results['hits']['hits'])
 
 
 @app.route("/")
 def load_base():
-    return render_template('base.html')
+    return render_template('home.html')
 
 
 if __name__ == '__main__':
     import sys
 
     debug = False
-    app.run(debug=True)
+    app.run(debug=debug)

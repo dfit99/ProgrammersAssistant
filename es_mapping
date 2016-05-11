@@ -28,7 +28,7 @@
         },
         "methods":{
           "properties": {
-              "method_name": {"type": "string", "analyzer": "snowball_analyzer", "index_options": "offsets"},
+              "name": {"type": "string", "analyzer": "snowball_analyzer", "index_options": "offsets"},
               "description": {"type": "string", "analyzer": "snowball_analyzer","index_options": "offsets"},
               "title":  {"type": "string","index": "not_analyzed", "index_options": "offsets"},
               "language": {"type": "string","index": "not_analyzed", "index_options": "offsets"}

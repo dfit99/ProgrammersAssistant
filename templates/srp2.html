@@ -2,64 +2,89 @@
 {% block content %}
 <br>
 <p>Results: {{total}}</p>
- <form class="navbar-form navbar-left" role="search" method="post" action="search">
-                <div class="form-group">
-                    <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
-                </div>
-                <input type="hidden" name="offset" value="0">
-             <input type="hidden" name="type" value="methods">
-                <input type="hidden" name="language" value="{{language}}">
+<form class="navbar-form navbar-left" role="search" method="post" action="search">
+    <div class="form-group">
+        <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+    </div>
+    <input type="hidden" name="offset" value="0">
+    <input type="hidden" name="type" value="methods">
+    <input type="hidden" name="language" value="{{language}}">
 
-                <button type="submit" class="btn btn-default">Next</button>
- </form>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-cloud-upload"></span> Fetch me docs!
+    </button>
+</form>
 <ul>
     <div class="container" style="=background: blue;">
         <div class="list-group">
             {% for n in my_list %}
-            <li  class="list-group-item">
+            <li class="list-group-item">
 
                 <div class="list-group-item-heading">
-                    <span class="badge">{{n['_score']}}</span>
+                    <span class="badge">{{n['_score']}} </span>
+                    {% if n['_source']['language'] == "Python" %}
+                    <a href="#" class="pull-left"><img src=http://i.imgur.com/I33mFai.png?3"></a>
+                    {% elif n['_source']['language'] == "Java" %}
+                    <a href="#" class="pull-left"><img src=http://i.imgur.com/EuYhIKA.png?3"></a>
+
+                    {% endif %}
+
+
+                    </label>
+                    <button type="button" class="button button1"
+                            data-toggle="collapse" data-target="#{{n[1]}}"><span
+                            class="glyphicon glyphicon-expand"></span> Expand
+                    </button>
+                    </br>
+                   <b>{{n['_source']['title']}}   </b>  <i> {{n['_source']['name']}}</i>
 
                 </div>
-                <p class="list-group-item-text" style="white-space: pre-line">
-                    language? {{n['_source']['language']}}
-                    Source? {{n['_source']['source_code']}}
-                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{n[1]}}">Show
-                        More
-                    </button>
 
-                <pre> {{n['highlight']['description'][0]|safe}}</pre>
+                {% if n['_source']['description'] | length >= 1200 %}
+
+
+                <p class="list-group-item-text" style="white-space: pre-line">
+                <pre> {{n['_source']['description'][0:1200]|safe}}</pre>
                 </p>
+
+                {% else %}
+                <p id="{{n[1]}}" data-toggle="collapse" class="list-group-item-text" style="white-space: pre-line">
+                <pre> {{n['_source']['description']|safe}}</pre>
+                </p>
+                {% endif %}
+
             </li>
 
             {% endfor %}
-
-            {% if offset >= 20 %}
-
-            <form class="navbar-form navbar-left" role="search" method="methods" action="search">
-                <div class="form-group">
-                    <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
-                </div>
-                {% set new_offset = offset - 20 %}
-                <input type="hidden" name="ofset" value="{{new_offset}}">
-                <button type="submit" class="btn btn-default">Previous</button>
-            </form>
-
-            {% endif %}
-
-            <form class="navbar-form navbar-left" role="search" method="methods" action="search">
-                <div class="form-group">
-                    <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
-                </div>
-                <input type="hidden" name="offset" value="{{offset}}">
-                <input type="hidden" name="language" value="{{language}}">
-
-                <button type="submit" class="btn btn-default">Next</button>
-            </form>
-
-
         </div>
+        {% if offset >= 20 %}
+
+        <form class="navbar-form navbar-left" role="search" method="post" action="search">
+            <div class="form-group">
+                <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+            </div>
+            {% set new_offset = offset - 20 %}
+            <input type="hidden" name="ofset" value="{{new_offset}}">
+            <input type="hidden" name="language" value="{{language}}">
+            <input type="hidden" name="type" value="methods">
+
+            <button type="submit" class="btn btn-default">Previous</button>
+        </form>
+
+        {% endif %}
+
+        <form class="navbar-form navbar-left" role="search" method="post" action="search">
+            <div class="form-group">
+                <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+            </div>
+            <input type="hidden" name="offset" value="{{offset}}">
+            <input type="hidden" name="language" value="{{language}}">
+            <input type="hidden" name="type" value="methods">
+
+
+            <button type="submit" class="btn btn-default">Next</button>
+        </form>
+
+
     </div>
 
 </ul>
