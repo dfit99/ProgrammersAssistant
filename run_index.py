@@ -11,11 +11,24 @@ def q_total(size=0):  # returns total count for all docs
     query = json.dumps({"query": {"match_all": {}}})
     return ES.count(index=INDEX_NAME, doc_type=DOC_TYPE, body=query)
 
-def q_field(key, value, doc_type='posts', offset=0, size=10): #returns match for key value pair
-    query = json.dumps({"from" : offset, "size" : size,
-        "query": {"match": {key: {'query': value}},
+def q_field(body, language, doc_type='posts', offset=0, size=10): #returns match for key value pair
+    if language is not None:
+        print language
+        query = json.dumps({"from" : offset, "size" : size,
+                            "query":  {"bool" : {
+        "must" : {
+            "match" : { "body" : body }
+        },
+        "filter": {
+            "term" : { "language" : language }
+        },
 
-    }})
+        }}})
+    else:
+        query = json.dumps({"from" : offset, "size" : size,
+        "query": {"match": {"body": {'query': body}},
+
+        }})
     return ES.search(index=INDEX_NAME, doc_type=doc_type, body=query)
 
 # def q_field(key, value):  # returns match for key value pair
@@ -62,12 +75,17 @@ def srp():
     except KeyError:
         offset = 0
 
-    results = q_field('body', query, type, offset)
-    print(q_total())
+    try:
+        language = request.form['language']
+    except KeyError:
+        language = None
+
+
+    results = q_field(query,language, type, offset)
     total = str(results['hits']['total'])  # get total hits count
     offset= int(offset) + 10
 
-    return render_template('srp.html', total=total,raw=request.form["Search"],offset=offset, my_list=results['hits']['hits'])
+    return render_template('srp.html', total=total,raw=query,language=language, offset=offset, my_list=results['hits']['hits'])
 
 
 

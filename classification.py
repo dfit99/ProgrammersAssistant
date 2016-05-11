@@ -67,6 +67,10 @@ def test(classifier):
         with open("classifier/mixed_java_test/" + file, 'rb') as java_file:
             py_test = (programming_features(java_file), "Java")
             test_set.append(py_test)
-    #print(classifier.pseudocode(depth=4))
+    print classifier.most_informative_features()
     return nltk.classify.accuracy(classifier, test_set)
 
+
+
+if __name__ == "__main__":
+        print test(train())

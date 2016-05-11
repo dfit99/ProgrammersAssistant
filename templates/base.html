@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Flask Template Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <style type="text/css">
-      .container {
-        max-width: 1500px;
-        padding-top: 100px;
-      }
-      h2 {color: red;}
+        .container {
+            max-width: 1500px;
+            padding-top: 100px;
+        }
+        label {
+        color: red; /* makes the text-black */
+}
+
+        h2 {
+            color: red;
+        }
     </style>
-  </head>
-  <script>
-        $("\n").replaceAll("<br>");
+</head>
+<script>
+    $("\n").replaceAll("<br>");
 
 </script>
-  <body>
+<body>
 
-  <nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">VectorSearch!</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-      <form class="navbar-form navbar-left"  role="search" method="post" action="search">
-        <div class="form-group">
-          <input type="text" name="Search" class="form-control" placeholder="Search" >
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">VectorSearch!</a>
         </div>
-        <input type="hidden" name="start" value="0">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <form class="navbar-form navbar-left" role="search" method="post" action="search">
+                <div class="form-group">
+                    <input type="text" name="Search" class="form-control" placeholder="Search">
+                </div>
+                <input type="hidden" name="start" value="0">
+                <label class="radio-inline"><input type="radio" value="Python" name="language" >Python</label>
+                <label class="radio-inline"><input type="radio" value="Java" name="language">Java</label>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
-    <div class="container">
-      <br>
-      {% block content %}
+<div class="container">
+    <br>
+    {% block content %}
 
-      {% endblock %}
-      <br>
+    {% endblock %}
+    <br>
 
-    </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  </body>
-
-
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
 
 
 </html>
