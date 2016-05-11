@@ -4,7 +4,7 @@ import json, csv
 import testLanguageCode
 import classification
 import sys
-from test_doc import parse_python_docs, parse_java_docs
+from doc_parser import parse_python_docs, parse_java_docs
 import pprint
 
 reload(sys)
@@ -51,7 +51,6 @@ class BuildIndex:
         actions = []
         for i in range(1, 2):
             with open("month" + str(i) + ".csv", 'rb') as datafile:
-                print i
                 csv_file_obj = csv.reader(datafile)
                 csv.field_size_limit(500 * 1024 * 1024)
                 for row in csv_file_obj:
@@ -68,14 +67,14 @@ class BuildIndex:
             document = python_dict[key]
             for method in document:
                 description = document[method]
-                actions.append(self.format_documentation(method,description,name,"python"))
+                actions.append(self.format_documentation(method,description,name,"Python"))
         java_dict = parse_java_docs()
         for key in java_dict:
             name = key
             document = java_dict[key]
             for method in document:
                 description = document[method]
-                actions.append(self.format_documentation(method,description,name,"java"))            
+                actions.append(self.format_documentation(method,description,name,"Java"))
 
         return helpers.bulk(self.es, actions,
                             stats_only=True)  # perform bulk insert Input: array of nested dictionaries
@@ -83,11 +82,7 @@ class BuildIndex:
 
 
 
-def test_doc():
-    python_dict = parse_python_docs()
-    pp = pprint.PrettyPrinter(indent=4)
-    #pp.pprint(python_dict)
-    print python_dict.keys()
+
 if __name__ == '__main__':
     import sys
 

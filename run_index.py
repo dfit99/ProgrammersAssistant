@@ -11,27 +11,59 @@ def q_total(size=0):  # returns total count for all docs
     query = json.dumps({"query": {"match_all": {}}})
     return ES.count(index=INDEX_NAME, doc_type='methods', body=query)
 
-def q_field(body, language, doc_type='posts', offset=0, size=10): #returns match for key value pair
-    if language is not None:
-        query = json.dumps({"from" : offset, "size" : size,
-                            "query":  {"bool" : {
-        "must" : {
-            "match" : { "body" : body }
-        },
-        "filter": {
-            "term" : { "language" : language }
-        },
 
-        }}, "highlight": {
-        "fields" : {
-            "body" : {}
-        }}})
+def q_field(body, language, doc_type='posts', offset=0, size=10):  # returns match for key value pair
+    if str(language) != str(None):
+        query = json.dumps({"from": offset, "size": size,
+                            "query": {"bool": {
+                                "must": {
+                                    "match": {"body": body}
+                                },
+                                "filter": {
+                                    "term": {"language": language}
+                                },
+
+                            }}, "highlight": {
+                "fields": {
+                    "body": {}
+                }}})
     else:
-        query = json.dumps({"from" : offset, "size" : size,
-        "query": {"match": {"body": {'query': body}},
+        query = json.dumps({"from": offset, "size": size,
+                            "query": {"match": {"body": {'query': body}}}, "highlight": {
+                "fields": {
+                    "body": {}
+                }}
 
-        }})
-    return ES.search(index=INDEX_NAME, doc_type="methods", body=query)
+                            })
+    return ES.search(index=INDEX_NAME, doc_type=doc_type, body=query)
+
+
+def q_field_methods(description, language, doc_type='methods', offset=0, size=10):  # returns match for key value pair
+
+    if str(language) != str(None):
+        query = json.dumps({"from": offset, "size": size,
+                            "query": {"bool": {
+                                "must": {
+                                    "match": {"description": description}
+                                },
+                                "filter": {
+                                    "term": {"language": language}
+                                },
+
+                            }}, "highlight": {
+                "fields": {
+                    "description": {}
+                }}})
+    else:
+        query = json.dumps({"from": offset, "size": size,
+                            "query": {"match": {"description": {'query': description}}}, "highlight": {
+                "fields": {
+                    "description": {}
+                }}
+
+                            })
+    return ES.search(index=INDEX_NAME, doc_type=doc_type, body=query)
+
 
 # def q_field(key, value):  # returns match for key value pair
 #     query = json.dumps({"query": {
@@ -81,14 +113,24 @@ def srp():
         language = request.form['language']
     except KeyError:
         language = None
+    try:
+        type = request.form['type']
+    except KeyError:
+        type = "posts"
 
-    print q_total()
-    results = q_field(query,language, type, offset)
+    if type == 'posts':
+        results = q_field(query, language, type, offset)
+    else:
+        results = q_field_methods(query, language, type, offset)
+
     total = str(results['hits']['total'])  # get total hits count
-    offset= int(offset) + 10
+    offset = int(offset) + 10
 
-    return render_template('srp.html', total=total,raw=query,language=language, offset=offset, my_list=results['hits']['hits'])
-
+    if type == "posts":
+        return render_template('srp.html', type=type, total=total, raw=query, language=language, offset=offset,
+                               my_list=results['hits']['hits'])
+    return render_template('srp2.html', type=type, total=total, raw=query, language=language, offset=offset,
+                           my_list=results['hits']['hits'])
 
 
 @app.route("/")

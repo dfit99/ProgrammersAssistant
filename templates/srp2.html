@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<p>Results: {{total}}</p>
+ <form class="navbar-form navbar-left" role="search" method="post" action="search">
+                <div class="form-group">
+                    <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+                </div>
+                <input type="hidden" name="offset" value="0">
+             <input type="hidden" name="type" value="methods">
+                <input type="hidden" name="language" value="{{language}}">
+
+                <button type="submit" class="btn btn-default">Next</button>
+ </form>
+<ul>
+    <div class="container" style="=background: blue;">
+        <div class="list-group">
+            {% for n in my_list %}
+            <li  class="list-group-item">
+
+                <div class="list-group-item-heading">
+                    <span class="badge">{{n['_score']}}</span>
+
+                </div>
+                <p class="list-group-item-text" style="white-space: pre-line">
+                    language? {{n['_source']['language']}}
+                    Source? {{n['_source']['source_code']}}
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{n[1]}}">Show
+                        More
+                    </button>
+
+                <pre> {{n['highlight']['description'][0]|safe}}</pre>
+                </p>
+            </li>
+
+            {% endfor %}
+
+            {% if offset >= 20 %}
+
+            <form class="navbar-form navbar-left" role="search" method="methods" action="search">
+                <div class="form-group">
+                    <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+                </div>
+                {% set new_offset = offset - 20 %}
+                <input type="hidden" name="ofset" value="{{new_offset}}">
+                <button type="submit" class="btn btn-default">Previous</button>
+            </form>
+
+            {% endif %}
+
+            <form class="navbar-form navbar-left" role="search" method="methods" action="search">
+                <div class="form-group">
+                    <input type="hidden" name="Search" class="form-control" placeholder="Search" value="{{raw}}">
+                </div>
+                <input type="hidden" name="offset" value="{{offset}}">
+                <input type="hidden" name="language" value="{{language}}">
+
+                <button type="submit" class="btn btn-default">Next</button>
+            </form>
+
+
+        </div>
+    </div>
+
+</ul>
+</ul>
+{% endblock %}

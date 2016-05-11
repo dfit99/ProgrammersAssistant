@@ -17,7 +17,6 @@ def parse_java_text(full_text, text_name):
             current_description = ""
             method = line.strip("\n")
             file_methods[method] = current_description
-            #print line
         elif method_header==True:
             if len(file_methods[method])>150:
                 method_header=False
@@ -49,18 +48,15 @@ def parse_python_docs():
                     current_description = ""
                     method = line.strip()
                     file_methods[method] = current_description
-                    print line
                 elif indented and method_header==True:
                     file_methods[method]+=line.strip()
                 else:
                     pass
-            pp = pprint.PrettyPrinter(indent=4)
             #pp.pprint(doc_dict[clean_file_name])
     return doc_dict
 #parse through the java documentation and collect methods + descriptions for each java doc, return as dict
 def parse_java_docs():
     java_dict={}
-    pp = pprint.PrettyPrinter(indent=4)
     for path, dirs, files in os.walk("library/java/"):
         for filename in files:
             fullpath = os.path.join(path, filename)
@@ -70,14 +66,10 @@ def parse_java_docs():
                 html_tag = filename.find(".html")
                 clean_file_name = filename[0:html_tag]
 
-                print clean_file_name, "hey over here"
                 #print full_text
                 full_text = full_text.encode('ascii','ignore')
                 doc_dict = parse_java_text(full_text,clean_file_name)
                 if doc_dict:
                     java_dict[clean_file_name]=doc_dict
 
-                    #pp.pprint(java_dict[clean_file_name])
     return java_dict
-#java_dict = parse_java_docs()
-#print len(java_dict)
