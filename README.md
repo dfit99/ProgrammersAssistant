@@ -1,5 +1,4 @@
 # ProgrammersAssistant
-Search engine for programmers
 Introduction:
 We created an information retrieval system tailored to programming related queries. The system has an ElasticSearch backend. Queries are made through a flask supported web app and their results are also delivered  through this same web app. We utilized machine learning and the vector space model (powered by ElasticSearch) 
 Quick Start:
