@@ -28,7 +28,7 @@ Classfication
  java_train.py: training files for Java
 java_test.py:  training files for Python
 
-             [the same format applies for Python and English training 
+the same format applies for Python and English training 
 
 ProgrammersAssistant
 	build_index.py: pulls corpus data, parses necessary fields, classifies and indexes the corpus
