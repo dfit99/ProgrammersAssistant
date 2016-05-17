@@ -1,6 +1,7 @@
 # ProgrammersAssistant
 Introduction:
 We created an information retrieval system tailored to programming related queries. The system has an ElasticSearch backend. Queries are made through a flask supported web app and their results are also delivered  through this same web app. We utilized machine learning and the vector space model (powered by ElasticSearch) 
+
 Quick Start:
 1)	Install nltk (3.1), beautiful soup (11.4), jinja2 (2.8) and flask (0.10.1)
 2)	Download corpus (refactor if necessary or stick to default naming scheme)
