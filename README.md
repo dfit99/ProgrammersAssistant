@@ -1,6 +1,6 @@
 # ProgrammersAssistant
 Introduction:
-We created an information retrieval system tailored to programming related queries. The system has an ElasticSearch backend. Queries are made through a flask supported web app and their results are also delivered  through this same web app. We utilized machine learning and the vector space model (powered by ElasticSearch) 
+I created an information retrieval system tailored to programming related queries. The system has an ElasticSearch backend. Queries are made through a flask supported web app and their results are also delivered  through this same web app. I utilized machine learning and the vector space model (powered by ElasticSearch) 
 
 Quick Start:
 1)	Install nltk (3.1), beautiful soup (11.4), jinja2 (2.8) and flask (0.10.1)
@@ -10,10 +10,10 @@ Quick Start:
 5)	To run app, in terminal call ‘run_index.py’
 
 Corpus (Corpusi) acquisition:
-We used Google BigQuery on a reddit dataset to obtain our corpus. We took all comments from the ‘/learnprogramming’ subreddit and performed a GROUP_CONCAT by their link_id in order to combine all posts in the same thread together (context is valuable). 
+I used Google BigQuery on a reddit dataset to obtain our corpus. I took all comments from the ‘/learnprogramming’ subreddit and performed a GROUP_CONCAT by their link_id in order to combine all posts in the same thread together (context is valuable). 
    
 
-For our second two corpuses, the ones consisting of documentation we pulled the documentation right from the official websites. 
+For the second two corpuses, the ones consisting of documentation we pulled the documentation right from the official websites. 
 See es_mapping.json for schema. Two mapping types 1) Reddit mapping type named ‘posts’ 2) Java/Python mapping type named ‘methods’
 For the first corpus (the reddit corpus), all parsing was done in build_index.py. It was very minimal and included iterating over the set cvs corresponding to our corpus and joining them by a new line symbol. Classification was done as well.
 For the second corpus parsing was done with a number of heuristics (see doc_parser.py) making heavy use of the beautiful soup library
