@@ -19,10 +19,9 @@ For the first corpus (the reddit corpus), all parsing was done in build_index.py
 For the second corpus parsing was done with a number of heuristics (see doc_parser.py) making heavy use of the beautiful soup library
 Any attempts to change the corpuses should make sure that all directory names in the code are refactored according and the schemas will match up!
 
-##How to run:
 
 
-Directory Structure:
+##Directory Structure:
 Templates
 	All the html templates, for the homepage, the search results page and the error page are in this 
 Classfication
