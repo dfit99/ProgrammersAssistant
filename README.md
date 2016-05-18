@@ -18,6 +18,7 @@ See es_mapping.json for schema. Two mapping types 1) Reddit mapping type named â
 For the first corpus (the reddit corpus), all parsing was done in build_index.py. It was very minimal and included iterating over the set cvs corresponding to our corpus and joining them by a new line symbol. Classification was done as well.
 For the second corpus parsing was done with a number of heuristics (see doc_parser.py) making heavy use of the beautiful soup library
 Any attempts to change the corpuses should make sure that all directory names in the code are refactored according and the schemas will match up!
+
 How to run:
 
 
